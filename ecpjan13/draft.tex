@@ -1,0 +1,39 @@
+documentclass[10pt,a4paper]{article}
+\setlength\topmargin{-48pt}
+\setlength\headheight{0pt}
+\setlength\headsep{25pt}
+\setlength\marginparwidth{-20pt}
+\setlength\textwidth{7.0in}
+\setlength\textheight{9.5in}
+\setlength\oddsidemargin{-30pt}
+\setlength\evensidemargin{-30pt}
+\frenchspacing
+
+\newcommand{\HorRule}[1]{\noindent\rule{\linewidth}{#1}}
+
+\newcommand{\SepRule}{\noindent
+			\begin{center}
+				\rule{250pt}{1pt}
+			\end{center}
+			}
+\newcommand{\JournalName}[1]{%
+		\begin{center}	
+			\Huge \usefont{T1}{augie}{m}{n}
+			#1%
+		\end{center}	
+		\par \normalsize \normalfont}
+		
+\newcommand{\JournalIssue}[1]{%
+		\hfill \textsc{\mydate \today, No #1}
+		\par \normalsize \normalfont}
+		
+\newcommand{\NewsItem}[1]{%
+		\usefont{T1}{augie}{m}{n} 	
+		\large #1 \vspace{4pt}
+		\par \normalsize \normalfont}
+
+
+\newcommand{\NewsAuthor}[1]{%
+			\hfill by \textsc{#1} \vspace{4pt}
+			\par \normalfont}
+			
