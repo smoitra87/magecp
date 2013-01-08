@@ -26,7 +26,7 @@
 \usepackage[english]{babel}			% english
 \usepackage{graphicx}				% images
 \usepackage{amssymb,amsmath}		% math
-\usepackage{multicol}				% three-column layout
+\usepackage{multicol,caption}				% three-column layout
 \usepackage{url}					% clickable links
 \usepackage{marvosym}				% symbols
 \usepackage{wrapfig}				% wrapping text around figures
@@ -40,16 +40,18 @@
 \usepackage{hyperref}
 
 
+
 % Customize (header and) footer
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lfoot{	\footnotesize 
-		Newletter from HowToTeX.com \\
-		\Mundus\ \href{http://www.howtotex.com}{HowToTeX.com}	\quad
-		\Telefon\ 555-5555											\quad
-		\Letter\ \href{mailto:frits@howtotex.com}{frits@howtotex.com}
-	  }
+\lfoot{}
+%\lfoot{	\footnotesize 
+%		Newletter from HowToTeX.com \\
+%		\Mundus\ \href{http://www.howtotex.com}{HowToTeX.com}	\quad
+%		\Telefon\ 555-5555											\quad
+%		\Letter\ \href{mailto:frits@howtotex.com}{frits@howtotex.com}
+%	  }
 \cfoot{}
 \rfoot{\footnotesize ~\\ Page \thepage}
 \renewcommand{\headrulewidth}{0.0pt}	% no bar on top of page
@@ -100,6 +102,10 @@
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
 %%% ---------------
 %%% BEGIN DOCUMENT
 %%% ---------------
@@ -113,7 +119,7 @@
 
 
 % Upper part of the page
-\includegraphics[width=0.5\textwidth]{ecplogo.jpg}\\[1cm]    
+\includegraphics[width=0.5\textwidth]{pics/ecplogo.jpg}\\[1cm]    
 
 \HRule \\[0.4cm]
 { \Huge \bfseries THE EXPLORER}\\[0.4cm]
@@ -155,7 +161,7 @@
 % Title	
 % -----
 \JournalIssue{1}
-\JournalName{The Explorer}
+\JournalName{The EXPLORER}
 \noindent\HorRule{3pt} \\[-0.75\baselineskip]
 \HorRule{1pt}
 % -----
@@ -187,7 +193,29 @@
 	In this edition of the newsletter you will find trip reports of Alana Gilman hiking the Grand Canyon, John Zolko ice climbing in the Adirondacks, Utah hiking trip by Bill Baxter and part 4 of the alumni Nanga Parbat journal. The ECP has awarded some new life member cards. The activities pursued by the club and the officers in charge. Club business such as minutes from the club general meeting, BOG meeting, the treasurer report, the librarian report and the mountaineering school report. We also include an environmental article by Ginette Vinski. New members applying to be members of the club are listed. Finally, we include contact information of officers and an enrollment form in the end. 
 \\
 \\
+-- Subhodeep Moitra (Deep)
+
+\vspace{0.5cm}
+
 	Again as a reminder, you are invited to attend the club general meeting and BOG member are requested to attend the BOG meeting. The meeting times for this month are :
+	
+\vspace{1cm}
+
+\begin{multicols}{2}
+\Large
+JANUARY GENERAL MEETING\\
+Thursday, January 10, 7:30PM\\
+The Union Project (Highland Park Area)\\
+841 North Negley Avenue
+
+JANUARY BOG MEETING\\
+Thursday, January 17th 7:30PM\\
+at Bill Baxter's Home
+
+
+
+\normalsize
+\end{multicols}
 	
 \end{minipage}
 \end{center}
@@ -206,19 +234,183 @@
 \vspace{0.5cm}
 \begin{multicols}{2}
 
-
-This is a link to Alumni news \hyperlink{steck}{Hello World}
-
 \sect{Trip and Event Reports}
 
-\subsect{Spruce Knob - Ottinger}
+\subsect{Grand Canyon - Alana Gilman}
+\textbf{Park Name:} Grand Canyon National Park, South Rim, Arizona\\
+\textbf{Hikers:} Alana Gilman \& Rahul Shah\\
+\textbf{Trail Name:} Rim Trail/Hermit's Rest Trail/Tonto Trail West/Bright Angel Trail\\
+\textbf{Date In:} December 27, 2012\\
+\textbf{Date Out:} December 29, 2012\\
+\textbf{Total Distance}: 32.5 miles\\
 
-\subsect{Grand Canyon - Gilman}
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/day0_1.jpg}
+ \captionof{figure}{Day 0: Looking over the rim at the adventure ahead}
+\end{Figure}
 
-\subsect{Ice Climbing - Zolko}
+	
+\textbf{Original Itinerary: }\\
+	\textbf{Day 0:} Arrive at park. Camp at Mather Campground on rim.\\
+\textbf{	Day 1} (12 miles): Hitchhike 8 miles along rim trail/road to Hermit's Rest Trailhead (free shuttle does not operate Dec-Feb). Hike 7.0 miles to Tonto Trail West junction and 5 miles to BL5 campground (Salt Creek).\\
+\textbf{	Day 2} (13.5 miles): Hike 8 miles along Tonto Trail West to Indian Gardens. Hike 5.5 miles to Bright Angel Campground on Bright Angel Trail. Dinner reservations at Phantom Ranch restaurant.
+\textbf{	Day 3} (8.5 miles): Breakfast at Phantom Ranch restaurant. Hike 8.5 miles on South Kaibab Trail to rim.
 
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/day0_2.jpg}
+ \captionof{figure}{Day 0: Camping at the rim }
+\end{Figure}
+
+
+\textbf{Actual Itinerary:}\\
+\textbf{	Day 0:} Arrive at park. Camp at Mather Campground on rim.\\
+\textbf{	Day 1} (17.3 miles): Hike 8.0 miles along rim trail to Hermit's Rest Trailhead. Hike 7.0 miles to Tonto Trail West junction and 2.3 miles to BL7 campground (Monument Creek).\\
+\textbf{	Day 2} (10.7 miles): Hike 10.7 miles along Tonto Trail West to Indian Gardens Campground.\\
+\textbf{	Day 3} (4.5 miles): Hike 4.5 miles along Bright Angel Trail to rim.
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/day1_1.jpg}
+ \captionof{figure}{Day 1: A frosty sunrise at the rim }
+\end{Figure}
+
+Our first backpacking trip of the Grand Canyon did not go according to plan, starting with Day 0 when we arrived at the park to find that the road to Hermit's Rest Trailhead was closed to all traffic due to winter weather conditions. We decided to modify our itinerary to include the 8 mile hike along the rim trail to arrive at the trailhead. At the backcountry office, we were able to change our Day 1 campsite to BL7 (Monument Creek), 2.7 miles closer than BL5 to account for the extra mileage along the rim, making our Day 1 total distance 17.3 miles rather than 12 miles and Day 2 total distance 16.2 miles rather than 13.5 and Day 3 unchanged. \\
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/day1_2.jpg}
+ \captionof{figure}{Day 1: Morning view from hike along the rim to Hermit's Rest Trailhead }
+\end{Figure}
+
+On the morning of Day 1, we left Mather campground at 5:20am in a snowstorm and arrived at Hermit's Rest Trailhead at 10am (30 minute stop at Bright Angel Lodge to fill water). We were unsure of whether water would be available at the trailhead due to the closed road and carried a full 7.5 liters to the BL7 campsite. At the trailhead after 8 miles along the rim, we felt strong and energized after stopping to make breakfast and chat with a ranger who was delivering water. At 11am, we began the descent into the canyon along Hermit's Rest Trail. The trail conditions were snowy with some ice, but still passable without crampons. We did not see any other hikers throughout the day. Just about the time we were beginning to feel tired and the distance was wearing on us, we came upon a landmark section of the trail called “Cathedral Stairs”. It seems that a mountaineering school student can't escape the stairs even in Arizona! 
+
+
+By the time we arrived at the Tonto Trail West junction, we had 2.3 miles left and were very sore and tired. It was 4pm and we hoped to arrive at camp before dark (sunset was around 5:30pm). We raced through the last section as quickly as possible and arrived at BL7 (Monument Creek) just in the nick of time to filter water from the creek and set up camp. There was one other party of two at the campsite.
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/day1_3.jpg}
+ \captionof{figure}{Day 1: Snow \& ice for the descent along Hermit's Rest Trail}
+\end{Figure}
+
+Day 2 is when the real drama of the trip began. We woke up at 3:30 to depart before sunrise to allow plenty of time for the long hike ahead and the anticipated soreness from the day before. Upon leaving camp around 5:30am, we walked 100 yards to the creek bed, where two cairns marked the way to the campsite coming from the East. However, there was no indication of the direction of the trail heading West. 
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/day1_4.jpg}
+ \captionof{figure}{Day 1: Hermit's Rest Trail. The scale of the canyon is truly incredible}
+\end{Figure}
+
+
+The map purchased in the giftshop on the rim was of such a small scale, that details like this one were impossible to discern. We tried to read contour lines and were certain the trail bent to the left around a large butte and to the right of the “monument” of Monument Creek. In the dark, it was too difficult to discern trail from river wash and after about 15 minutes, we decided to head back to the campsite to wait until sunrise at 7:30am to make another attempt. We killed time cooking breakfast and waiting for the sun (it was pitch black because all moonlight was blocked by the tall canyon walls). When we took off for the second time, we again headed to the left to find the trail. We scrambled around on rocks and scree, looking around corners, sometimes dropping our packs to scout and other times convincing ourselves that a few feet of dirt or lack of vegetation must be the trail, only to find another dead-end. Eventually, we found ourselves out on the side of a formation, no trail in sight, scrambling around near the ledge of a 1,000+ ft dropoff when I tripped and hit the ground hard.
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/day2_1.jpg}
+  \captionof{figure}{Day 2: The Tonto Trail West}
+\end{Figure}
+
+ That was the low point when we realized that we were far from our goal and needed to give up this futile search. This highly traveled trail couldn't possibly involve this kind of scrambling and no markings. We hoped that the other campers were still at the campsite to give directions since they had arrived from the East the night before. We found them eating breakfast and they led us up the creek bed to the right to a small, barely-marked trail entrance at least 200 yards away. We were dumbfounded how anyone could be expected to find the trail without any indication of direction when traveling from the West, exasperated that 
+
+we spent two hours searching needlessly (and dangerously) to the left, and frustrated that we were now four hours behind our desired departure time, leaving at 9:30am. But we left all of that behind at the campsite and took off with renewed energy, calculating that with an average pace of 1.8 mph (a very manageable speed despite our sore legs and heavy packs) we could still make it to the Bright Angel Campground by 5pm for our dinner at Phantom Ranch restaurant. 
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/day2_2.jpg}
+  \captionof{figure}{Day 2: The inner canyon, Tonto Trail West}
+\end{Figure}
+
+But those delicious steaks were not to be our fate that night. Just when we were hitting our stride, Rahul began to slow down, complaining of knee pain. It seemed that the weight, excessive mileage from the previous day, and scrambling around left him with an overuse injury. Even though the trail for the day was relatively flat, his knee hurt with any kind of flexion. We wrapped it in an ace bandage and gave him some painkillers, but pretty soon our pace was down to a crawl. Suddenly, our priorities changed from making it to dinner to making it out of the canyon. We were 20 miles in and 20 miles out, without a ranger station in reach for at least 10 miles. The 13 miles left for that day would be impossible, as would the 9 mile hike out on South Kaibab the next day. We shifted ~15lbs from his pack to mine, and moved at a slow but steady pace. We set our sites on the Indian Gardens campground, only 10.7 miles from our starting point that day and, more importantly, 4.5 miles from the rim. This modified route would keep us from descending another 1,500 feet into the canyon and thus, having to ascend that same amount the next day. We struggled to arrive at Indian Gardens before sunset and limped in around 5:20pm.  My feet were killing me from the ~45 lb pack and Rahul's knee was in bad shape. Normally, this is a packed campground and a permit is required year-round, but the snowstorm and cold temperatures worked in our favor and there was a site available, which we used despite our lack of permit. As we rationed our remaining food and ate cashews for dinner we dreamt of the steak and cornbread we were missing out on at the bottom. 
+
+In the morning, we continued with the slow and steady plan. I again carried the majority of the weight as we lumbered out of the canyon, one step at a time. We made it to the top and celebrated our victory. The trip didn't look anything like we had planned, but we had a blast and both made it out relatively unscathed. Rahul's knee is healing well and no permanent damage was done. We're already planning our return trip to explore the Tonto Trail East with a longer itinerary but more time for rest and shorter mileages each day. Hopefully this time those steaks won't elude us. They should be twice as good on the second try! 
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/day2_3.jpg}
+ \captionof{figure}{Day 3: Goodbye to the canyon, Bright Angel Trail}
+\end{Figure}
+
+\textbf{Food log: }\\
+2 breakfasts: oatmeal, coffee, honey stinger waffles\\
+	3 trail day lunches: salami, parmesan cheese, beef jerky, clif bars, trail mix, candy, sweet \& salty bars, dried fruit\\
+	2 dinners: Mountain House dehydrated meals
+\\
+\\
+\textbf{Water log:} 7.5 liter total capacity\\
+	Day 1: Bright Angel Lodge water fountain, Monument Creek (filter in field)\\
+	Day 2: Monument Creek (filter in field), Indian Gardens tap\\
+	Day 3: Indian Gardens tap
+\\
+\\
+\textbf{Weather:}\\
+	Day 0: High 33, Low 9 with light snow, 2” accumulation\\
+	Day 1: High 40, Low 20 with snow down to 4 miles below rim\\
+	Day 2: High 45, Low 15 clear sky, no precipitation/wind\\
+	Day 3: High 30, Low 15 clear sky, no precipitation/wind
+\\
+\\
+\textbf{Gear:} ~38lb pack weight with water\\
+	2 person/3 season tent w/ fly \\
+0o sleeping bags with reactor extreme +25O liners\\
+	Sleeping pads insulated \& inflatable\\
+	Sit pad inflatable \\
+Wire mesh animal proof food storage bag\\
+	Jetboil stove with 110g isobutane/propane fuel canister\\
+	Headlamps \\
+Hiking poles\\
+	Crampons (did not use, would have preferred yaktracks or microspikes)\\
+	Scarpa Goretex Mountaineering boots\\
+	Down booties as camp shoes (best gear of the trip!)\\
+	Belay jackets (left at rim lodge and didn't need)\\
+	Rain jacket/pants \& pack covers	\\
+	Nanopuff down or primaloft\\
+	Base layer long john pants \& shirt\\
+	Liner gloves, beanie hats/earmuffs\\
+	Nalgenes w/o insulated sleeves\\
+	Camelback bladders (didn't freeze at night)\\
+	Sunglasses/sunscreen (did not use)
+\\
+\\	
+\textbf{Permit Information: }\\
+Day 0: Mather campground at rim is first come/first serve in person with limited campsites accessible during winter months. 99\% of campsites were unoccupied. $15/campsite ($8 with annual national park pass
+
+Days 1 and 2: Backcountry camping permits obtained through the Backcountry office via snail mail. Applied in October and did not receive first choice itinerary for campsite BL6 on 12/27. Permit approval received by mail in early December with required waiver of experience and risks for aggressive itinerary for hikes of >10 miles/day. Limited capacity at small campgrounds. Size of camps: 1 space at BL5, 1 space at BL6, and 3 spaces at BL7. Bright Angel campground and Indian Gardens Campgrounds are much bigger but also more popular. 
+
+Permit was originally for BL5 (Salt Creek) on 12/27 and CBG (Bright Angel) on 12/28. Total cost: \$30 (\$10 for permit application and \$5/person/night). Permit adjusted to BL7 (Monument Creek) for 12/27 at Backcountry office on day 0 due to weather and road closure to Hermit's Rest Trailhead.
+\\
+\\
+\textbf{Difficulty: }\\
+\textbf{Rim Trail:} easy, flat, paved in some areas and wide dirt path in others, frequent distance markers, close to road, snow-covered\\
+\textbf{	Hermit's Rest Trail:} moderately difficult, uneven steps, rocky terrain throughout, close to ledge, steep descents, long traverses, easy to navigate, clear trail, no water source, shade throughout day, light snow/ice cover with rocks down to 4 miles from rim\\
+\textbf{	Tonto Trail West:} difficult, flat trail, unmarked junctions, clear but narrow dirt path, close to ledge, poorly defined entrance/exit from campsites, misplaced cairns near confusing junctions/creeks/landmarks, no snow/ice\\
+\textbf{	Bright Angel Trail:} moderate, well-defined/maintained wide trail, easy to navigate, high traffic, minimal ledge exposure with rock border, multiple rest houses w/ emergency phones, steep ascent (3,000ft in 4.5 miles), snow/ice beginning at 3 mile house to rim with sand treatment for traction
+
+	Most difficult parts of trip were routefinding at campsite junctions along Tonto Trail West and total distance on Day 1. Water source reliability was not as described by backcountry office at multiple campsites within canyon. Dry creeks.
+
+\pagebreak
+
+\subsect{Hiking in Colorado \& Utah - Baxter/George}
+
+\small
+{\it \dots At the end of the "Ledges", the "Trough" begins. This was an area of concern, since several climbers had told us there was snow and ice requiring going off route. As I came around the corner I was surprised, however, to see the amount of waterfall ice on one side. We had no crampons or ice axes but as it turned out they would not have made a difference \dots}
+\normalsize
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/tom_bill.jpg}
+ \captionof{figure}{Bill Baxter and Tom George from a Colorado \& Utah hiking trip}
+\end{Figure}
+
+This an excerpt from a detailed trip report by Tom George. The full trip report can be found at \url{http://www.tomcentral.com/colutahweb/index.php}
+
+
+\subsect{Ice Climbing - John Zolko}
+
+dfgdfg
 \subsect{Nanga Parbat Journal - Part 4}
-
+\pagebreak
 
 \sect{Honors}
 \subsect{Life Members}
