@@ -1,0 +1,837 @@
+%%% LaTeX Template: Newsletter
+%%%
+%%% Source: http://www.howtotex.com/
+%%% Feel free to distribute this template, but please keep the referal to HowToTeX.com.
+%%% Date: September 2011
+
+
+%%% ---------------
+%%% PREAMBLE
+%%% ---------------
+\documentclass[10pt,a4paper]{article}
+
+% Define geometry (without using the geometry package)
+\setlength\topmargin{-48pt}
+\setlength\headheight{0pt}
+\setlength\headsep{25pt}
+\setlength\marginparwidth{-20pt}
+\setlength\textwidth{7.0in}
+\setlength\textheight{9.5in}
+\setlength\oddsidemargin{-30pt}
+\setlength\evensidemargin{-30pt}
+
+\frenchspacing						% better looking spacing
+
+% Call packages we'll need
+\usepackage[english]{babel}			% english
+\usepackage{graphicx}				% images
+\usepackage{amssymb,amsmath}		% math
+\usepackage{multicol,caption}				% three-column layout
+\usepackage{url}					% clickable links
+\usepackage{marvosym}				% symbols
+\usepackage{wrapfig}				% wrapping text around figures
+\usepackage[T1]{fontenc}			% font encoding
+\usepackage{charter} 				% Charter font for main content
+\usepackage{blindtext}				% dummy text
+\usepackage{datetime}				% custom date
+	\newdateformat{mydate}{\monthname[\THEMONTH] \THEYEAR}
+\usepackage[colorlinks=false]{hyperref}	% links and pdf behaviour
+\usepackage{hyperref}
+
+
+
+% Customize (header and) footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{}
+%\lfoot{	\footnotesize 
+%		Newletter from HowToTeX.com \\
+%		\Mundus\ \href{http://www.howtotex.com}{HowToTeX.com}	\quad
+%		\Telefon\ 555-5555											\quad
+%		\Letter\ \href{mailto:frits@howtotex.com}{frits@howtotex.com}
+%	  }
+\cfoot{}
+\rfoot{\footnotesize ~\\ Page \thepage}
+\renewcommand{\headrulewidth}{0.0pt}	% no bar on top of page
+\renewcommand{\footrulewidth}{0.4pt}	% bar on bottom of page
+
+%%% ---------------
+%%% DEFINITIONS
+%%% ---------------
+
+% Define separators
+\newcommand{\HorRule}[1]{\noindent\rule{\linewidth}{#1}} % Creating a horizontal rule
+\newcommand{\SepRule}{\noindent							 % Creating a separator
+						\begin{center}
+							\rule{250pt}{1pt}
+						\end{center}
+						}						
+
+% Define Title en News input
+\newcommand{\JournalName}[1]{%
+		\begin{center}	
+			\Huge \usefont{T1}{augie}{m}{n}
+			#1%
+		\end{center}	
+		\par \normalsize \normalfont}
+		
+\newcommand{\JournalIssue}[1]{%
+		\hfill \textsc{\mydate \today, No #1}
+		\par \normalsize \normalfont}
+
+\newcommand{\NewsItem}[1]{%
+		\usefont{T1}{augie}{m}{n} 	
+		\large \bf #1 \vspace{4pt}
+		\par \normalsize \normalfont}
+		
+\newcommand{\NewsAuthor}[1]{%
+			\hfill by \textsc{#1} \vspace{4pt}
+			\par \normalfont}		
+
+\newcommand\sect[1]{%
+  \section*{#1}%
+  \addcontentsline{toc}{section}{#1}}
+
+\newcommand\subsect[1]{%
+  \subsection*{#1}%
+  \addcontentsline{toc}{subsection}{#1}}
+
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
+%%% ---------------
+%%% BEGIN DOCUMENT
+%%% ---------------
+\begin{document}
+
+
+
+\begin{titlepage}
+
+\begin{center}
+
+
+% Upper part of the page
+\includegraphics[width=0.5\textwidth]{pics/ecplogo.jpg}\\[1cm]    
+
+\HRule \\[0.4cm]
+{ \Huge \bfseries THE EXPLORER}\\[0.4cm]
+
+\HRule \\[1.5cm]
+
+
+\textsc{\LARGE March 2013}\\[9cm]
+
+\textsc{\large The EXPLORER is the monthly newsletter of the Explorers Club Of Pittsburgh,Inc., a non-profit organization devoted to research, adventure and education in outdoor and wilderness recreation and conservation}\\[0.5cm]
+
+
+% Title
+
+% Author and supervisor
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushleft} \large
+%\emph{Author:}\\
+%John \textsc{Smith}
+%\end{flushleft}
+%\end{minipage}
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushright} \large
+%\emph{Supervisor:} \\
+%Dr.~Mark \textsc{Brown}
+%\end{flushright}
+%\end{minipage}
+
+\vfill
+
+% Bottom of the page
+%{\large \today}
+
+\end{center}
+
+\end{titlepage}
+
+
+% Title	
+% -----
+\JournalIssue{1}
+\JournalName{The EXPLORER}
+\noindent\HorRule{3pt} \\[-0.75\baselineskip]
+\HorRule{1pt}
+% -----
+
+\tableofcontents
+
+\clearpage
+
+
+% Front article
+% -----
+\vspace{0.5cm}
+	\SepRule
+\vspace{0.5cm}
+
+
+
+\begin{center}
+\begin{minipage}[h]{0.8\linewidth}
+	\begin{wrapfigure}{l}{0.41\textwidth}
+		\includegraphics[width=0.6\linewidth]{pics/me.jpg}
+		\\% this spacer is needed to make the text on the right fit OK
+	\end{wrapfigure}
+	
+	\NewsItem{Message from the editor}
+	\emph{Greetings, ECP!} Welcome to the March edition of the newsletter. In this edition we have three exciting trip reports from Mt Washington where the ECP Mountaineering School Grad trip happened . Phil Sidel was presented with the ECP Life membership plaque. As part of official business of the club, meeting agendae, old meeting minutes, BOG minutes and reports from the various officers and appointees are included. The club treasury report is also included. Some club officers are retiring and new members need to be elected to these posts. Finally, we include contact information of officers. 
+\\
+\\
+-- Subhodeep Moitra (Deep)
+
+\vspace{0.5cm}
+
+	Again as a reminder, you are invited to attend the club general meeting and all club members are invited to attend the BOG meetings as well. The meeting times for this month are :
+	
+\vspace{1cm}
+
+\begin{multicols}{2}
+\Large
+MAR GENERAL MEETING\\
+Thursday, Feb 14, 7:30PM\\
+The Union Project (Highland Park Area)\\
+841 North Negley Avenue
+\\
+MARCH BOG MEETING\\
+Thursday, March 21 7:30PM\\
+Phil and Irene  Sidel's house,\\
+5854 Hobart Street - 15217
+
+
+
+\normalsize
+\end{multicols}
+	
+\end{minipage}
+\end{center}
+% -----
+
+
+
+\pagebreak
+\clearpage
+
+
+% Other news (1)
+% -----
+\vspace{0.5cm}
+	\SepRule
+\vspace{0.5cm}
+\begin{multicols}{2}
+
+\sect{Trip Reports and Other Fun stuff}
+
+
+
+\subsect{Skiing Trip - Mount Washington - MtSchool Grad Trip 2013}
+\textbf{Team:} Greg Buzulencia \& Kevin Chartier \\
+Trip report by Greg Buzulencia
+
+
+Our 12 hour drive to NH started off the adventurous weekend with two incidents in the last 30 minutes of the drive.  First, flashing red and blue lights and a very peculiar officer who pulled me out of the car to ask me what I was hiding and why I seemed nervous.  I told him I just got a ticket last week and didn't need another one.  Next, we arrived at the Intervale (which I don't think stands for Hyatt in German) only to realize that I had likely left the key to the roofbox, which contained all of our gear, in the lock and it fell out somewhere over the last 12 hours.   By a stroke of absolute luck there happened to be a locksmith right next to our hotel who was also a climber / skier and willfully picked the lock for free.
+
+
+The next morning my instructor Kevin Chartier and I decided to have a new key made and then head off to Willey's Slide to join everyone in some low angle ice climbing and self arrest practice.  We ran out one pitch as far as the 70m rope would take us and then rappelled down.  It was 1:30PM and we were hoping to get ski into Harvard Cabin by dark.  After some carpool rearranging we drove over to Pinkham Notch, I place I knew well.  For 8 years straight, I had come up here to backcountry ski in Tuckerman's Ravine along with the masses in spring.  It was fun, adventurous, but generally a shit-show with drunk intermediate skiers trying to prove to their buddies that they could ski a 45-50 degree cirque.  I was hoping for something different as Kevin and I slogged our gear up the road-sized "trail" to Harvard Cabin.  I decided to pull a sled so I could bring a smaller pack and make the trip up a little easier.  After setting up camp, I gradually gave up hope that my tentmate Jamie was going to join me, made dinner and I turned off the headlamp at 8:30PM.  
+
+\begin{Figure}
+ \centering 
+ \includegraphics[width=0.95\linewidth]{pics/greg4.jpg}
+ \captionof{figure}{Tuckerman's ravine}
+\end{Figure}
+
+On Friday morning Kevin and I were ready to go by 8:15AM and made quick work of getting over to Hermit Lake to start our ski approach to Tuckerman's Ravine.   Kevin was his usual energetic self as he bounded up to the floor of the ravine.  
+
+
+We decided that Left Gully looked to have most coverage and the lowest avalanche danger.  This was the lowest amount of snow I have ever seen in the ravine and I had been there in May and June numerous times.  We switched to crampons and Kevin kicked a nice staircase up Left Gully.  The top of the gully becomes a steep 50-55 degree pitch with sketchy snow so we decided to transition just 50 feet below the ridge. 
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/greg6.jpg}
+ \captionof{figure}{Kevin skiing down}
+\end{Figure}
+
+ Kevin let me get after the fresh wind-packed snow first and I hopped and sliced my way down the gully.  I pulled off to a safe spot and gave Kevin the signal that he was good to come down. 
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/greg2.jpg}
+ \captionof{figure}{Greg skiing down}
+\end{Figure}
+
+
+ We skied our way over to the bottom of Right Gully, grabbed a snack and chatted with the temporary cabin caretaker, Brad.  We then ran up Right Gully, transitioned about 150' from the top due to ice and low snow revealing some shrubs, and started down for our second run of the day.   Kevin decided to take video of my run down Right Gully, which included a tumbling acrobatic fall after a careless turn.  After a wallk and ski back to Hermit Lake we raced down the Sherbourne Trail, a classic New England ski trail about 20-30' wide.  Our legs were burning when we got back to Pinkham Notch and faced with the notion that we still had to ski up to Harvard Cabin, we uncovered a couple PBRs I had buried in the snow so they wouldn't explode in my car.  With a light load this time we skinned up the trail back to Harvard Cabin to hang out with our fellow classmates and share stories from the day.  
+ 
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/greg1.jpg}
+ \captionof{figure}{Greg hauling skis up snow gulley}
+\end{Figure}
+
+ 
+Saturday brought a calm, but cloudy and mild day.  Kevin and I skied up to Huntington Ravine only to realize we had no idea where we were!  We finally located O'Dell's and Central Gully, but due to the visibility and rotten ice on our objective for the day, ice climbing in Yale, we decided to stash our ice climbing gear and climb up South Gully to check out if it was skiable.  Once at the bottom, from what we could see of it, it was quite skiable.  As we continued up it became narrower and I kept lowering my standards of what was skiable.  At an ice bulge I decided to stash my skis as there was no way I was skiing over it with the runout South Gully offered below.  Kevin kept his, which ended up being an excellent idea because the route opened up again and offered some nice skiable snow up above the crux, which he rather enjoyed.  At the top we were met by about half of the ECP Mountaineering School and realized that while there wasn't much visibility, there was absolutely no wind.  What a day!  I didn't have much interest in summiting due to the numerous times I'd been there (bad memories of 70 mph winds and graupel embedded in my face) and my exhaustion from the past 3.5 weeks of nearly non-stop travel and activity.  We took pictures together and parted ways as Kevin and I descended to the bulge separately, and then together on skis below the bulge.  
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/greg3.jpg}
+ \captionof{figure}{Meeting with other Teams after climbing South Gulley}
+\end{Figure}
+
+Kevin and I have different philosophies on good ski terrain (he likes narrow and steep, I like open, steep and deep) but we both agreed that the snow conditions were about as ideal as they get on the East Coast.  We did some ski-bush-thrashing to get over to Central Gully, took a look at what we could see of the gully and decided it wasn't worth the effort for marginal ski terrain.  Skiing back to Harvard Cabin took about 3 minutes as we zipped along the cat track to the lodge.  After a quick pack-up of the gear into my sled Kevin and I headed over to the Sherbourne Trail for one last ski down.  If you've ever skied downhill with a sled, you'll understand how these things have a mind of their own.  Luckily I had before and was able to control it with the exception of a couple steep sections where I watched the sled slide past me and roll over.  Back at Pinkham Notch we 'found' more beers and changed into less sweaty clothes and got to relax while we waited for the rest of our crew to show up.  One thing Kevin and I have in common is the absence of the ability to sit still for more than 5 minutes, but with 10 days of backcountry skiing in the last 2 weeks, I was ready to just stare off into space for a couple hours.  A couple of female backcountry skiers offered us an hours worth of entertaining conversation and some pulls from a bottle of Newfoundland hooch, which helped pass the time until the rest of our carpool party came down off of the mountain.  Though sometimes it's just good to sit, relax and reflect.  
+
+
+Overall, the trip was amazing and offered me some new and exciting experiences, but I would love to go back and do some multi-pitch ice climbing.  I can't say enough about the Mountaineering School and the unique community it creates in Pittsburgh.  I look forward to joining my fellow graduates in the mountains for many years to come.  
+
+
+\clearpage
+\pagebreak
+
+
+\subsect{Ice and Snow Ascent of Mt. Washington - MtSchool Grad Trip 2013}
+\textbf{Team:} Don Wargowsky \& Veronica Malencia \\
+Trip report by Veronica Malencia
+
+Date: February 14-16, 2013
+\\
+\\
+\textit{Planned Itinerary:}\\
+Don and I were glad to have the opportunity to work as a two-person team for the Mountaineering School graduation trip. Our plan was to spend Thursday at Willy's Slide working out our rope systems and getting in a few ice pitches. Friday the plan was parking lot to summit via Pinnacle Gully with a quick stop at Harvard Cabin to stash gear. Saturday's aim was to bag another ice gully in Huntington Ravine depending on avi conditions and level of exhaustion. Weather conditions a few days out put Thursday as the best weather and Saturday with winds gusting near 50mph on the summit. Minimal snow accumulation was predicted and we were optimistic that avi conditions would be favorable. 
+\\
+\\
+\textit{Actual Itinerary:}\\
+Thursday Feb 14 - With 13 students, 9 instructors, and 7 teams all starting the trip at Willy's Slide, our start on Thursday was not surprisingly a little later than expected. The day began with self arrest and snow travel practice. Don and I also went through the process of digging a snow pit and using an Extended Column Test to determine snow stability, setting and evaluating the strength of snow pickets, and creating v-thread ice anchors. 
+
+
+Don and I then roped up and climbed Willy's Slide. This was a great opportunity to experience the joys of calf burn, to use ice tools with upper grip rests (great for climbing bulges!), and to practice efficient belay transitions. 
+
+Friday Feb 15 - We had the opportunity to dry out and repack gear over night which was great. 4:30am wake up, 5:30am left hotel with a little car packed to the brim, 6:30am began hike from Pinkham Notch Visitor's Center. Temps were quite mild and there was no wind on the hike up making it was very hard to regulate temperature. I missed the turn off for the Fire Road which is labeled as "AMC Lions Head Route" and made it to Hermit Lake Cabins before I realized the mistake. This resulted in nearly an extra mile of hiking which with a 55lb pack can be quite disheartening. 
+
+
+We made the decision that with the extra hike-in time and the extra half hour it took in the morning that we'd postpone summit day. Because we were no longer pushing for the summit, we took time to dig out platforms, set up tents, and drop gear before continuing on. Avalanche conditions were posted as low and moderate in all of the Huntington Ravine gullies - just what we were hoping for. 
+
+
+The hike into Huntington Ravine was quite pleasant on the trail but turned into a lot of post holing as we made our way to the base of Pinnacle Gully. Don seemed to get by just fine, as I managed to fall in up to my waist every few steps. I guess that's a skill that comes with practice. 
+Unlike the other gullies in the ravine, Pinnacle is hidden from view making it impossible to tell whether or not there are other parties on the route until you've reached the base of the gully. Lucky for us the only rope team on the route was way up above us - out of sight and barely audible.
+
+
+ The first pitch was by far the most challenging due to the lack of rest ledges and the subsequent calf burn that ensued. It also had some of the best ice of the route, though, and Don looked strong on the lead. Pitch two was mostly snow and pitch three was a majority ice but with more rests. We finished the gully in 4 pitches and 4 hours. We topped out in the alpine garden with great visibility, low winds, and little snow making the cairns of the Alpine Garden Trail very visible and the shovel handle marking the top of Escape Hatch not too difficult to find. 
+Traveling down steep snow was another new experience but I gained confidence quickly and we were back in camp by dusk - no headlamps necessary. 
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/roni1.jpg}
+ \captionof{figure}{Moving up the snow on the second pitch of Pinnacle Gully  Photo Credit: : Don Wargowsky}
+\end{Figure}
+
+ 
+Saturday Feb 16 - 6am wake up. Leslie and I shared a tent and woke up warm and cozy - a job well done if you ask me. 7:30am departed camp. Avi conditions were excellent. Our plan was south gully to alpine garden trail to the summit (via lion's head and tuckerman ravine trail). Visibility was low in Huntington Ravine as we made our way to the base of South Gully, but the top out put us above the clouds. Travel up South was smooth going and we had the route mostly to ourselves. The hike up to the summit was surprisingly mild with little need for belay jackets or goggles. Unfortunately that meant we were also bombarded by a few hundred hikers enjoying the holiday weekend. As we mused about their varying level of preparedness and appropriate dress I realized how much I had learned in the past 5 months. We summited around noon, snapped a few pictures with the other ECPers that had arrived at the same time and then made our way back down via Lion's Head Trail. We had carried a rope with us and were able to rappel the one steep section, avoiding the mess of hikers trying to navigate it with varying levels of success. 
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/roni2.jpg}
+ \captionof{figure}{At the summit}
+\end{Figure}
+
+The pack up and hike down went smoothly and we reminisced about our successes and lessons learned as we made our way to the cars. We were back at the car by 4:30pm. We celebrated the trip by consuming an inordinate amount of food and beer at the Moat with Leslie and Sarah. 
+
+\clearpage
+\pagebreak
+
+
+\subsect{Climbing Snow and Ice Gullies in New Hampshire- ECP MtSchool Grad Trip 2013}
+\textbf{Team:} Dan Talian, Sam Taggart \& Paul Toth
+Trip report by Paul Toth
+\\
+\\
+Over a four day period in mid February the Pittsburgh Explorers Club's Mountaineering School took its Graduation trip to Mountain Washington, New Hampshire.   The class was segregated into climbing teams and each given discretion as to what they would climb.   Team Taggart left the planning table with an aggressive 3-day plan that included self arrest practice at Wiley slide, then moving across the valley to Mt. Webster to ascend a 6 pitch ice climb named Shoestring Gulley, the moving all team equipment by sled up Mt. Washington to Harvard cabin, and then consecutive days of Ice climbing Pinnacle and Damnation Gullies in Hunting ton Ravine.  We were motivated and ambitious.
+
+The 14-hour, post work, snow storm ridden drive, which 2/3rds of the team endured, set the tone of adversity, determination, and perseverance that would mark our entire trip.  The first day dawned overcast but fairly warm and with no wind.  After some quick gear rearrangement, we headed to Mt. Wiley with the rest of the class.  There we practiced self-arrest, avalanche pit construction, and placing snow pickets.  This all went smoothly and was fairly uneventful except that Dan and Paul got to experience the joys of "cutting steps".  We had to do this in order to get high enough on the ice field to be pulled down and thus self arrest.  I'd like to give a serious 'shout out' to the mountaineers of yesteryear that cut steps all the way up to mountain summits, Kudos!  We cut about 20 steps and that was enough to determine that front points and Ice tools were great ideas.  As morning was drawing to a close, we decided that it was time to leave and go across the valley for our ascent of Shoe String Gulley.  So, we drove a short distance to the next parking lot where we geared up; at noon we took the Appalachian Trail and headed toward Mt. Webster. 
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/dan1.jpg}
+ \captionof{figure}{On the approach}
+\end{Figure}
+
+This proved to be a good approach, as there was a bridge across the Saco River and a few hundred yards beyond that, there was a sign post at a trail intersection showing the way to the Saco River Trail and the Webster Cliff Trail.  The Saco River trail is the best way to get to the start of any of the road facing gullies on Mt. Webster and the Webster Cliff Trail is the best way down, after completing these climbs.  Finding the place to leave the trail and begin to move vertically, proved more challenging than had been expected.  The snow/ice gullies on Mt. Webster are readily apparent from the road that runs through the valley as they are high on the ridge, but when you are on the Saco River Trail you cannot see the routes through the forest.  Further, there are a series of drainages and it becomes hard to determine if it is a general runoff or if it leads to a climbable gulley.  In the end we decided to skip the first major drainage and proceeded to a smaller one further down the trail which we thought might be the start of the route.  
+
+
+We climbed up a line of snow covered boulders that were flanked on either side by dense pine forest.  We climbed, assuming that at any minute we would emerge to clear visibility where we would verify that we were on route or be able to laterally adjust if we were not.  This continued for two and a half hours, at which point we decided to take a break and reassess the situation.  We were not entirely convinced that we were on route; we thought that perhaps we were climbing parallel to the gulley.  Shoe string gulley, according to the guide book, was supposed to be six pitches of steep snow and ice and it was supposed to take all day.  What we were climbing was taking a long time, but did not seem to match the description in the guide book.  In the end, Dan moved directly left through the forest to see if he could come out on the route.  He roped-up in case he unexpectedly emerged at a point high up a vertical face.  This did not happen and all he found were more trees.  So, we continued up and began thinking that perhaps we were actually on route, that the route might be easier than depicted in the guide book, and wondering how many pitches we might have already completed.  At this point we thought that we would be topping out soon and contemplated summiting Mt. Webster via the trail with all of our extra time. 
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/dan2.jpg}
+ \captionof{figure}{Do not Fall!}
+\end{Figure}
+
+
+Two hours later we reached the point that the guide book describes as "You will know when it's time to rope up."  Here, things took a decidedly vertical turn and we did indeed rope up and put on crampons.  We noted at this time that the sun was about a fist above the crest of the closest mountain top and falling quickly.  Not far above that stop we built our first belay anchor and Sam took off on lead.  Before he finished the first pitch, we were three head-lamps in the blackness. The climbing progressed well, if a little slow, with Sam leading each pitch.  Most of the climbing was ice with some snow mixed in and doing it all by head lamp gave the whole experience a surreal feeling.  Also, not being able to see the top or really know how far we had to go made things that much more interesting.  Not much was said and not many pictures were taken during this part of the route, as the darkness, fatigue, and cold were turning everything into "Type II" fun.  On one of the middle pitches Sam boosted the team' spirits by radioing down "On Belay…. But do not fall, I repeat Do Not Fall".  After Paul and Dan climbed to that belay stance, we learned that if you have one piece of bad pro, then the thing to do is to back it up with several other bad pieces.  Following that, there was better ice on the remainder of the climb and the last pitch turned out to be an exhaustive 100 meter swim through chest deep powder.  At 10pm we stood at the lowest point on the ridge, took a short break and immediately began our descent. 
+
+
+We easily found the Webster Cliff Trail, because someone had walked it since the last snow fall, and began the trip down.  The guide book had said that the trail could be hard to find in winter if it had not been broken, and we all agreed that were it not for that one set of tracks, it would have been difficult to descend in the dark. Following the trail for an hour and a half, brought us the sign post that we had seen earlier on the way in; from there it was a short trip across the bridge and back to the cars.  We arrived back at 11:30 pm; it had taken us eleven and a half hours and proved to be the "all day endeavor" promised in the guide book.  As we sat in McDonalds an hour later, we all agreed that we had gotten the full Alpine experience, and that starting the climb at dusk had really made it quite unique.
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/dan3.jpg}
+ \captionof{figure}{Transport with human sleds}
+\end{Figure}
+
+
+The next day ended up being somewhat of a rest day; we got up at a reasonable hour, had a great breakfast, and drove to Mt. Washington.  There we loaded the sled and proceeded to drag all of our equipment up to the Harvard Cabin Campsite.  It was at this point that all the hours that we had put in at the Cathedral of Learning seemed worth it.  The favorite topic of discussion on the way up was how much easier it was going to be going down, and how much this was going to be 'worth it' later.  Once we arrived at the camp site we spent some time sharing stories and beverages with the other teams in the cabin.  The rest of the day was sort of low key as we made camp, reunited with other team members, and helped prep the camp site for the traverse team who had yet to arrive. From our team's perspective, that ended the second day.
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/dan4.jpg}
+ \captionof{figure}{Summit picture with multiple teams}
+\end{Figure}
+
+
+On Saturday, after checking the avalanche conditions on the board, we decided on climbing South Gulley in Huntington's Ravine.  So, after breakfast we grabbed our climbing packs and began the hike up the trail to the start of the climb.  When we arrived at the base of the climb, we realized that climbing South Gulley was not an original idea as there were two other teams (including the 2-man "Ski- Bunny" team) already going up ahead of us.  We decide to all join up as a single group and move together in an expedition like assault.   The climb itself was fairly straight forward and we did it all un-roped, but the fact that we did it in heavy fog made the whole event seem rather special.  Part way up the route, the gulley split with the left side being all ice, the right side all snow, and both sides flanked by rock.   The student body elected to go right and ascended the snow line, while Sam and Jeff took the opportunity to each solo the ice on the left.  We all took a short break at the top and then pushed for the summit.  Rather than take the trail that moves across Alpine Gardens to the summit trail, we instead chose to take a bearing to the summit and go directly up the ridge looming above us.   We slogged through the snowfield and scrambled over the rocks dotted the hillside for more than an hour and finally reached the top.  The summit of Mt. Washington was unseasonably warm, sunny, and wind free.  So, we took a fair amount of time to look around, have some hot chocolate, take pictures, and talk with other people that had come up by other routes.  
+The descent back to Harvard Cabin was via the Lion Head Trail and was a fairly easy undertaking.  From there we decided that it was a better idea to go down to town with our comrades, have pizza, and drink beer, than to stay another night eating Mountain House meals in the cold and dark.  So, we quickly broke camp, repacked the sled, and departed.  As it turns out, the rhetoric on the way up was true and the sled paid back all of our earlier investment.  Dan guided it effortlessly the entire way down as Sam and Paul ran alongside.  Once down, we were off again to the Interval Motel and then on to the local pizza shop for the most fun of the entire trip; drinking beer and telling climbing stories.  It was a long, hard, and fun couple of days; we put into practice most of what we learned in the ECP Mountaineering school, got a lot of practical experience, and forged some deeper friendships.
+
+\clearpage
+\pagebreak
+
+\sect{Club Business}
+This sections contains information on club business and other official matters. 
+
+\subsect{Phil Sidel honored as Life member}
+Phil Sidel was presented with his official ECP life membership plaque at the last general meeting. This is a major honor and only very few members have been felicitated thus. Congratulations Phil !
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/phil1.jpg}
+ \captionof{figure}{Long time ECP member Phil Sidel honored with the ECP life membership plaque}
+\end{Figure}
+
+
+\subsect{Meeting Schedule and Locations}
+
+\Large
+\textbf{MARCH GENERAL MEETING}\\
+Thursday, MAR 14, 7:30PM\\
+The Union Project (Highland Park Area)\\
+841 North Negley Avenue
+\\
+\\
+\textbf{MARCH BOG GENERAL MEETING}\\
+Thursday, March 21 7:30PM\\
+Phil and Irene  Sidel's house,\\
+5854 Hobart Street - 15217
+
+\normalsize
+
+
+\subsect{Club General Meeting Agenda}
+\textbf{OFFICER REPORTS}\\
+President, Rush Howe -- Announce:
+Audit Committee \& Other Appointments\\
+Vice President, Bill Baxter -\\
+\textbf{VP REPORT :} \\
+\textit{The presentation for the March 14th general meeting will be done by Exkursion Outfitters of Monroeville.   Since our 2013 rock school is about to kick off they will concentrate on rock climbing gear but will also tell us about other new and exciting gear that they carry.  If you have a specific item you would like them to show you give them a call.
+Exkursion Outfitters4037;  William Penn Hwy; Monroeville, PA 1546; phone - 412-372-7030 email - info@exkursion.com
+}
+I also need presentations for the rest of the year.   Please let me know when you want to tell us about your trip.
+
+Secretary, Phil Sidel
+\\
+\\
+\textbf{APPOINTEE REPORTS}\\
+Membership Coordinator, Michelle Najera.  
+Phil Mentioned something about a potential/current member Ted Williams. Michelle mentioned that the following have applied for Membership:
+
+\begin{center}
+	\begin{tabular}{c}
+		Judith Morgan\\
+		Allen Schultz	\\
+		Jennifer Freedburg	\\
+		LeAndra Pifferetti	\\
+		James Laird and Ashley May	\\
+		Michael Grumley and Kate Bonn	\\
+		Justin Carlo
+	\end{tabular}
+\end{center}
+
+
+\textbf{NOTE:} If you as a voting member have questions about the qualifications of any applicant(s), contact the membership coordinator. She can provide you with relevant information from the application form.
+\\
+\\
+Motion to accept these applicants as new members...\\
+Motion to consider the dues paid with their application as sufficient dues for 2013.
+\\
+\\
+\textbf{COMMITTEE REPORTS}\\
+Audit Committee Report \\
+Rock school report : \\
+Mountaineering School Progress Report : \\
+Policies Update Committee/Working Group Progress Report \\
+Any others?  Is there a Roast Committee? 
+
+\clearpage
+\pagebreak
+
+\end{multicols}
+
+
+\subsect{Treasurer Report}
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=\linewidth]{pics/treasure1.pdf}
+\end{Figure}
+
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=\linewidth]{pics/treasure2.pdf}
+\end{Figure}
+
+\pagebreak
+
+\begin{multicols}{2}
+
+\textbf{OLD BUSINESS}
+\\
+\\
+\textbf{NEW BUSINESS}
+\\
+\textbf{\textit{Gear Rental and Equipment Inventory}}
+The club gear rental rates and inventory details can be found at  \url{http://www.pittecp.org/gear}. Phil Sidel would like to discuss this point further. 
+\\
+\\
+\textbf{\textit{New Equiment Chair}}
+Paul Guarino is looking to retire from the roll of Equiment Chair in the near future. A new gear coordinator needs to elected and current temporary arrangements need to be made.
+\\
+\\
+\textbf{\textit{New Membership Coordinator}}
+Michelle Najera is planning to retire from the post of membership coordinator. A new membership coordinator needs to be appointed. 
+\\
+\\
+\textbf{\textit{Summer Location General Meetings}}
+Need to confirm the location for summer general meetings. 
+\\
+\\
+\textbf{ADJOURNMENT}
+
+
+\subsect{March BOG meeting agenda}
+
+\textbf{OFFICER REPORTS}\\
+\textbf{APPOINTEE REPORTS}\\
+\textbf{COMMITTEE REPORTS (including schools)}\\
+\textbf{NEW BUSINESS}
+ 
+\begin{itemize}
+\item Location and Time of Future BOG meetings
+\end{itemize}
+
+\end{multicols}
+
+
+\hrule 
+
+\subsect{February General Meeting Minutes}
+
+MINUTES - ECP GENERAL MEETING - FEB. 14, 2013\\
+at The Union Project - 804 N. Negley Avenue\\
+Attendees:  14 Members (at least 2 of whom have yet to renew for 2013; 2 Applicants; 1 Guest
+Meeting opened 7:50pm, Rush Howe presiding.
+\\
+\\
+\textbf{OFFICER REPORTS}\\
+\\
+\textbf{VP - Bill Baxter - }Tonight's program, Alex "Sherpes" Rzawski will show Slide show of travels in Italy, 1981.  Next month Exkursion will demonsrate gear such as will be used in the ECP Rock School noted that Exkursion offers discounts for ECP members	and special discount for our Rock School Students.	Also noted that since our Rock School is oversubscribed, many of the applicants who can't get in  are referred to the Exkursion Rock Climbing classes.
+\\
+\\
+\textbf{Secretary - Phil Sidel -}  Minutes and Policies Update Committee Report are published in the February newsletter; posted on our website. Addendum to Published Policies Update Committee Report. Phil has now reviewed the minutes for year 2000 -he found several more topics which need clarification or revision in our formal policy statements.  He'll report on them as the committee  takes them up. Most importantly, he found one explicit policy change that was passed by the September 2000 BOG and the October 2000 General Meeting.  It is: Section 2.1 (modification/clarification) A Committee of 5 shall be required for the Rock Climbing School AND the 
+\\
+\\
+Mountaineering School for a total of 10 Section 2.8 (PolicyChange) A Club-Santioned Event, such as the Roast or Halloween Party, that will offer rock clmbing will be expected to meet the safety criteria (like helmets) of the Rock Climbing School. 
+\\
+\\
+He has edited the formal policy statements on the website to show these changes indicating the date they were enacted.  He is hoping the working group can come up with a more general set of policies covering ECP schools and ECP sanctioned/official events.
+\\
+\\
+Phil invited volunteers to help with reading the old minutes to find policies set by the BOG and/or membership and issues calling for a policy statement or clarification.  He indicated that the reading is really great fun.
+\\
+\\
+Phil then read the Minutes of the January BOG meeting, omitting the supplementary notes. The minutes were approved as read. Phil also announced that he has membership application forms, and ECP checks.  Anyone wishing to apply for membership or renewal, and anyone needing payment from ECP should see him  (Ted Williams did submit an application during the break).
+\\
+\\
+\textbf{Activities Chairperson - Ron Edwards} (this report came a bit later in the meeting but belongs under Officer Reports) 
+Ski Night was not well attended but worked out well for those who participated. \\
+Mountaineering School is now off on their winter climb.\\
+No date set on Mount Washington Cleanup.  We need a coordinator for planning arrangements.\\
+Also, no Flotilla scheduled as yet.\\
+Also no plan for an Easter Weekend ECP climbing event.\\
+Intro Party for Rock School is scheduled for April 9th at John Zolko's\\
+Don Wargowsky and the ACE outfitters/guides on the New \& Gauley Rivers invite ECP for an adventure weekend; this might be the venue for our annual "roast." Thinking of June 7-9 for this event. \\
+It would also be a fundraiser for the Mike Brown Fund. \\
+3rd Annual Seneca Summit (Ladies Only) is planned for July 28-29. \\
+Snow Lion Imports - Tibetan import shop of Craig Street, that has a "Sherpa Gear" department, invites ECP to the Lhosar New Year Celebration on Saturday, Feb. 16th.  See www.threeriversdharma.org \\
+Bill Baxter announced that he and Jeff will be conducting sailing classes, which will include restoration of an old  Hobi-cat. \\
+Alex "sheroes" Rsewski  announced the Raccoongaine Orienteering event at Racoon State Park - March 24th.  Limited to 120 participants - usually over-subscribed, so sign up early.  \\
+\\
+\\
+\textbf{Treasurer,  Editor, and Equipment Chairperson not present - no reports.}
+
+\textbf{APPOINTEE REPORTS:}
+Membership Coordinator was not present, but report was made based on her email reports. \\
+She was disappointed that January Meeting had not voted on applicants, but she issued them their membership cards anyway.\\
+Website problems still exist; she is building Membership list in Excel \\
+She is leaving beginning of May; we must appoint a replacement. \\
+New applicants listed in February Newsletter (Alex Berstein, Dennis Gittins, Kristin Pvtlak, Sarah C.Trafican) \\
+were unanimously approved for membership.  Welcome new members. The list includes January Applicants.
+\\
+\\
+Two new applicants were present: Ted Williams (who submitted his application during the break) 
+and Nate Dirkes (? We're not sure we got the correct spelling of the last name) who recently arrived here from Colorado.
+\\
+\\
+\textbf{Librarian - Phil Breidenbach }
+A co-librarian or assistant librarian to bring books to meetings and manage deposits is still needed.  Volunteers?
+\\
+\\
+\textbf{Environmental Coordinator - Ginette Vinski} 
+Spoke of the foul impact of disposal of pharmaceuticals  getting into our waterways.  There will be opportunity to safely dispose of these products starting in April.  Meanwhile, do not toss them in the john.
+\\
+\\
+\textbf{Historian - Phil Sidel}
+Reading the minutes and other stuff from past issues of The Explorer turns out to be very entertaining.  Members are welcome to borrow/copy materials.  Contact him sidel.climbing@gmail.com
+Nick Ross, mentioned that the trip reports of Jim Kazinski back in the 1960's were especially hilarious.\\
+\\
+\textbf{OLD BUSINESS}
+Phil Sidel was presented with his formal Life Member certificate.  He was completely surprised by this, and had no Idea why he was being called to the front of the room about "old business."  He again sincerely thanks the Club for the honor.
+\\
+\\
+\textbf{NEW BUSINESS}
+\\
+The MeetUp group idea was discussed again.
+\\
+\\
+Wilderness Rivers Outfitters, operating in several  Northwester states, has reached out for partnership with ECP, offering a 10\% discount for ECP trips  This has been accepted and is a done deal.
+\\
+\\
+Ginette mentioned the "We Like Parks" program.  Someone is planning or at least talking about a traverse line across the river from Mount Washington.
+\\
+There followed an intense discussion of where to eat and drink after the meeting.  Settled on the "Frank Tuary" on Butler Avenue.
+\\
+\\
+\textbf{Meeting adjourned - 8:50pm}
+\\
+\\
+There was no raffle during the break
+\\
+\\
+Alex "Sherpes" Rsawski presented an intriguing slide show of his adventures in Italy in 1981
+  The Slides focused on : \\
+	Dolomiti del Brenta, Trento,  \\
+	Central Italy Appennine mountains, such as Gran Sasso, Abbruzzo. 2903 m, and Monti Sibillini. 
+	  The 5 km plain surrounded by mountains is Piana di Castelluccio, some folks refer to it as the Mongolia of Italy 	Etruscan necropolis of San Giuliano, 1 hr drive north from Rome. 	Creek hike and exploration of Fosso del Biedano. An Abandoned rail line, station), bridge, and tunnel )
+
+\hrule
+
+\pagebreak
+
+
+
+\sect{Other News}
+
+
+
+\subsect{North Country Trail Conference Promotion - Joyce Appel}
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/promotion.pdf}
+ \captionof{figure}{}
+\end{Figure}
+
+
+\subsect{Outdoor Extravaganza Breakneck - Joyce Appel}
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/promotion2.pdf}
+ \captionof{figure}{}
+\end{Figure}
+
+
+
+\begin{multicols}{2}
+
+\subsect{WFA course - ECP Mountaineering School - Brian Kent}
+
+A wilderness first aid course is being organized for the ECP mountaineering school, and we still have several spots open for the ECP membership writ large. \\
+\\
+\begin{itemize}
+\item What: Wilderness First Aid, 16 hours of instruction split over two weekend days.
+\item Date: March 23-24
+\item Cost: \$96. This covers both instruction and materials.
+\item Location: CMU. The specific room will be provided upon registration.
+\item Instructor: Don Scelza, from CDS Outdoor School.
+\item Registration: pay Brian Kent (me), by cash, check, or paypal. If necessary I can arrange to meet people in person to accept cash, but mailed checks and paypal are easier. Checks can be mailed to
+\end{itemize}
+
+111 N. Fairmount St., Apt 1
+Pittsburgh, PA 15206.
+\\
+\\
+They should be made out to me. You can also send money by paypal to bpkent@gmail.com. Just make sure to indicate that it's a personal payment as a 'gift' or 'payment owed', but not a purchase. I cannot hold spots for people until they pay me.
+\\
+\\
+\textbf{Registration deadline: March 6th}, but the limited spots are first-come, first served.
+
+ 
+\subsect{Membership Benefit - Wilderness River}
+Wilderness River Outfitters, a whitewater rafting company that runs multi-day trips in Idaho, Montana, Oregon, and Alaska/Canada would like to offer ECP members a 10\% discount on our Middle Fork Salmon and Main Salmon river trips. The Middle Fork and Main Salmon are two classic river trips of the world, and the Middle Fork was recently ranked \#3 whitewater rafting trip in the World by National Geographic.  They take oar boats, paddle boats, inflatable kayaks and if requested can take hard shell kayaks. These are great river trips for either the experienced or novice boaters, providing excitement for everyone.  There are also off the water activities as well on these trips.
+
+You can check out their website and all their trips at \url{www.wildernessriver.com}
+\\
+\\
+Iris Conrad\\
+Wilderness River Outfitters\\
+\url{www.wildernessriver.com}\\
+iris@wildernessriver.com\\
+1-800-252-6581
+
+\end{multicols}
+% -----
+
+
+\pagebreak
+\clearpage
+
+\appendix
+
+\section{Contact Information and References}
+
+\subsection{Activities Coordinators}
+For some of our activities, we currently have no active coordinators. If you think you might be able to coordinate
+and lead these activities, contact Activities Chairperson Ron Edwards ecp@edwardsjr.com (412-327-2084)
+
+
+\begin{center}
+    \begin{tabular}{ | l | l | l | }
+    \hline
+    \textbf{Activity} & \textbf{Contact} & \textbf{Email} \\\hline
+	Backpacking & Suraj Joseph & surajj1234@gmail.com \\ \hline
+	Biking - Mountain & Rush Howe & rushhowe@yahoo.com \\ \hline
+	Biking - Road & Chip Kamin & chip.kamin@gmail.com \\ \hline
+    Caving  & Doug Fulton, Teralyn Iscrupe & fulton12b@yahoo.com\\ \hline
+    Fly Fishing & Bruce Cox & brcox33@comcast.net\\ \hline
+    Ice Climbing & Tom Prigg & Tom.prigg@gmail.com\\ \hline
+    In-Line Skating & Robin Kamin & ekamin@verizon.net\\ \hline
+    Mountaineering & Sam Taggart & samuel.taggart@gmail.com\\ \hline
+    Paddling - Flat Water & Nick Ross & Lnickross@gmail.com\\ \hline
+    Paddling - White Water & Barry Adams & bj2adams@juno.com\\ \hline
+    Rock Climbing & Ron Edwards & ecp@edwardsjr.com\\ \hline
+    Rowing & Bob Dezort & bobdezort@verizon.net\\ \hline
+    Running & Brian Ottinger &  brian-ecp@ottinger10.com\\ \hline
+    Sailing & Bill Baxter & billybax@yahoo.com\\ \hline
+		   &  Jeff Baxter& jeffreywbaxter@yahoo.com\\ \hline
+	Skiing & Downhill  &  Lindsay Hastings LMH239@gmail.com\\ \hline
+	Yoga  &  Allison Pochapin & a.pochapin@gmail.com\\ \hline
+            &  Elise Nolan & elise.nolan@gmail.com\\ \hline
+	Adventure Racing & & \\ \hline
+	Skiing  Cross-Country & & \\ \hline
+	Rafting & & \\ \hline
+	SCUBA Diving & & \\ \hline
+	Sea Kayaking & & \\ \hline
+	Triathlon Training & & \\ \hline
+	Orienteering (proposed) & & \\ \hline
+	Geocaching (proposed) & & \\ \hline
+	Skydiving (proposed) & & \\ \hline
+	 \hline
+    \end{tabular}
+\end{center}
+
+\paragraph{What does an Activity Coordinator do?}
+General advocacy and point of contact for the activity by helping current, new, or prospective members
+get connected with others in the club also interested in the activity and any events planned for it.
+\begin{enumerate}
+\item Seek out new members at general meetings (during the break or at the after-meeting) that
+indicate the activity as one of their interests and introduce yourself as that activities
+"coordinator" that can help them connect with and explore the activity.
+\item Answer incoming emails to the club (sometimes redirected from officers or others who receive
+the inquiry) related to the activity. This is rare.
+\item Spread the word if you see any local events or news related to the activity that you think
+members would like to know by posting (or reposting) on the Listserv and mentioning at any
+General Meeting that you attend. In some cases, create an Event (takes 2 minutes) on the ECP
+calendar to give that event extra visibility.
+\item Encourage any members that are planning an event on their own or as a small/closed group to
+consider opening it up to the general membership in the form of an official Event (and have
+them create the Event)
+\item If possible, directly or indirectly ensure that at least one Event for your activity occurs every year.
+\end{enumerate}
+
+\fbox{\parbox{\linewidth}{
+{\Large\bf ECPers!!}\\
+Contact the Coordinator for activities in which you want to participate.\\
+There are many activities which are not listed in the calendar,
+because the arrangements are spur-of-the-moment, or because\\
+they are regular, periodic (e.g., weekly) activities.\\
+\\
+Some examples are:\\
+Weekly In-Line Skating Sessions\\
+(Contact Coordinator Robin Kamin)\\
+Yoga Sessions in Frick Park\\
+(Contact Yoga Coordinator Elise Nolan)\\
+Flat Water Canoeing trips\\
+(Contact Coordinator Nick Ross)\\
+Mountain Biking Runs\\
+(Contact Coordinator Rush Howe)\\
+And many others\dots}}
+
+\subsection{Officers}
+\begin{center}
+    \begin{tabular}{ | l | l | l | l | }
+    \hline
+    \textbf{Position} & \textbf{Name} & \textbf{Email} & \textbf{Phone} \\\hline
+	President & Rush Howe & president@pittecp.org & 412-983-5265 \\\hline
+	Vice-President & Bill Baxter & vicepresident@pittecp.org & 412-926-8261 \\\hline
+	Secretary & Phil Sidel & philip.sidel@verizon.net & 412-521-9570 \\\hline
+	Treasurer & Kathleen Dehrer & treasurer@pittecp.org & \\\hline
+	Activities Chair & Ron Edwards & activities@pittecp.org & 412-327-2084 \\\hline
+	Equipment Chair & Paul Guarino & equipmentchair@pittecp.org & 585-727-1258 \\\hline
+	Editor & Subhodeep Moitra & editor@pittecp.org & 412-721-5305 \\\hline
+    \end{tabular}
+\end{center}
+
+\subsection{Appointees}
+The ECP Appointees are persons appointed by the president to fill key positions in the club. In
+addition there are appointed Activity Coordinators and Special Committees.
+
+\begin{center}
+    \begin{tabular}{ | l | l | l | l | }
+    \hline
+    \textbf{Position} & \textbf{Name} & \textbf{Email} & \textbf{Phone} \\\hline
+	Advertising & Tara Powers &	tarasmagicalpowers@gmail.com &  \\\hline
+	Environmental & Ginette Vinski & ginette@vinski.net & 412-366-4925 \\\hline
+	Historian & Phil Sidel & sidel.climbing@gmail.com & 	412-521-9570 \\\hline
+	Librarian & Phil Breidenbach & Booksandmaps@yahoo.com & 412-486-1450 \\\hline
+	Membership & Martha Gray & 	graymf@gmail.com &  \\\hline
+	Webmaster & Tom George & webmaster@pittecp.org & 412-831-4711 \\\hline
+	\end{tabular}
+\end{center}
+
+
+
+\pagebreak
+\clearpage
+
+
+%----
+\end{document} 
+
