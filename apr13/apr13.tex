@@ -1,0 +1,819 @@
+%%% LaTeX Template: Newsletter
+%%%
+%%% Source: http://www.howtotex.com/
+%%% Feel free to distribute this template, but please keep the referal to HowToTeX.com.
+%%% Date: September 2011
+
+
+%%% ---------------
+%%% PREAMBLE
+%%% ---------------
+\documentclass[10pt,a4paper]{article}
+
+% Define geometry (without using the geometry package)
+\setlength\topmargin{-48pt}
+\setlength\headheight{0pt}
+\setlength\headsep{25pt}
+\setlength\marginparwidth{-20pt}
+\setlength\textwidth{7.0in}
+\setlength\textheight{9.5in}
+\setlength\oddsidemargin{-30pt}
+\setlength\evensidemargin{-30pt}
+
+\frenchspacing						% better looking spacing
+
+% Call packages we'll need
+\usepackage[english]{babel}			% english
+\usepackage{graphicx}				% images
+\usepackage{amssymb,amsmath}		% math
+\usepackage{multicol,caption}				% three-column layout
+\usepackage{url}					% clickable links
+\usepackage{marvosym}				% symbols
+\usepackage{wrapfig}				% wrapping text around figures
+\usepackage[T1]{fontenc}			% font encoding
+\usepackage{charter} 				% Charter font for main content
+\usepackage{blindtext}				% dummy text
+\usepackage{datetime}				% custom date
+	\newdateformat{mydate}{\monthname[\THEMONTH] \THEYEAR}
+\usepackage[colorlinks=false]{hyperref}	% links and pdf behaviour
+\usepackage{hyperref}
+
+
+
+% Customize (header and) footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{}
+%\lfoot{	\footnotesize 
+%		Newletter from HowToTeX.com \\
+%		\Mundus\ \href{http://www.howtotex.com}{HowToTeX.com}	\quad
+%		\Telefon\ 555-5555											\quad
+%		\Letter\ \href{mailto:frits@howtotex.com}{frits@howtotex.com}
+%	  }
+\cfoot{}
+\rfoot{\footnotesize ~\\ Page \thepage}
+\renewcommand{\headrulewidth}{0.0pt}	% no bar on top of page
+\renewcommand{\footrulewidth}{0.4pt}	% bar on bottom of page
+
+%%% ---------------
+%%% DEFINITIONS
+%%% ---------------
+
+% Define separators
+\newcommand{\HorRule}[1]{\noindent\rule{\linewidth}{#1}} % Creating a horizontal rule
+\newcommand{\SepRule}{\noindent							 % Creating a separator
+						\begin{center}
+							\rule{250pt}{1pt}
+						\end{center}
+						}						
+
+% Define Title en News input
+\newcommand{\JournalName}[1]{%
+		\begin{center}	
+			\Huge \usefont{T1}{augie}{m}{n}
+			#1%
+		\end{center}	
+		\par \normalsize \normalfont}
+		
+\newcommand{\JournalIssue}[1]{%
+		\hfill \textsc{\mydate \today, No #1}
+		\par \normalsize \normalfont}
+
+\newcommand{\NewsItem}[1]{%
+		\usefont{T1}{augie}{m}{n} 	
+		\large \bf #1 \vspace{4pt}
+		\par \normalsize \normalfont}
+		
+\newcommand{\NewsAuthor}[1]{%
+			\hfill by \textsc{#1} \vspace{4pt}
+			\par \normalfont}		
+
+\newcommand\sect[1]{%
+  \section*{#1}%
+  \addcontentsline{toc}{section}{#1}}
+
+\newcommand\subsect[1]{%
+  \subsection*{#1}%
+  \addcontentsline{toc}{subsection}{#1}}
+
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
+%%% ---------------
+%%% BEGIN DOCUMENT
+%%% ---------------
+\begin{document}
+
+
+
+\begin{titlepage}
+
+\begin{center}
+
+
+% Upper part of the page
+\includegraphics[width=0.5\textwidth]{pics/ecplogo.jpg}\\[1cm]    
+
+\HRule \\[0.4cm]
+{ \Huge \bfseries THE EXPLORER}\\[0.4cm]
+
+\HRule \\[1.5cm]
+
+
+\textsc{\LARGE April 2013}\\[9cm]
+
+\textsc{\large The EXPLORER is the monthly newsletter of the Explorers Club Of Pittsburgh,Inc., a non-profit organization devoted to research, adventure and education in outdoor and wilderness recreation and conservation}\\[0.5cm]
+
+
+% Title
+
+% Author and supervisor
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushleft} \large
+%\emph{Author:}\\
+%John \textsc{Smith}
+%\end{flushleft}
+%\end{minipage}
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushright} \large
+%\emph{Supervisor:} \\
+%Dr.~Mark \textsc{Brown}
+%\end{flushright}
+%\end{minipage}
+
+\vfill
+
+% Bottom of the page
+%{\large \today}
+
+\end{center}
+
+\end{titlepage}
+
+
+% Title	
+% -----
+\JournalIssue{1}
+\JournalName{The EXPLORER}
+\noindent\HorRule{3pt} \\[-0.75\baselineskip]
+\HorRule{1pt}
+% -----
+
+\tableofcontents
+
+\clearpage
+
+
+% Front article
+% -----
+\vspace{0.5cm}
+	\SepRule
+\vspace{0.5cm}
+
+
+
+\begin{center}
+\begin{minipage}[h]{0.8\linewidth}
+	\begin{wrapfigure}{l}{0.41\textwidth}
+		\includegraphics[width=0.6\linewidth]{pics/me.jpg}
+		\\% this spacer is needed to make the text on the right fit OK
+	\end{wrapfigure}
+	
+	\NewsItem{Message from the editor}
+%% TODO
+	\emph{Greetings, ECP!} Welcome to the April edition of the newsletter. In this edition, we have a 
+	Some changes to the club newsletter. We are introducing a new section on upcoming trips and potential trips.Check out the section.  Greg Buzulencia will be giving a talk this coming general meeting on his backcountry skiing trip to  Iran. 
+\\
+\\
+-- Subhodeep Moitra (Deep)
+
+\vspace{0.5cm}
+
+	Again as a reminder, you are invited to attend the club general meeting and BOG member are requested to attend the BOG meeting. The meeting times for this month are :
+	
+\vspace{1cm}
+
+\begin{multicols}{2}
+\Large
+APR GENERAL MEETING\\
+Thursday, Apr 11, 7:30PM\\
+The Union Project (Highland Park Area)\\
+841 North Negley Avenue
+\\
+
+%% TODO
+MARCH BOG MEETING\\
+Thursday, March 21 7:30PM\\
+Phil and Irene  Sidel's house,\\
+5854 Hobart Street - 15217
+
+\normalsize
+\end{multicols}
+	
+\end{minipage}
+\end{center}
+% -----
+
+\pagebreak
+\clearpage
+
+
+% Other news (1)
+% -----
+\vspace{0.5cm}
+	\SepRule
+\vspace{0.5cm}
+\begin{multicols}{2}
+
+\sect{Upcoming and Potential Trips}
+This is a new experimental section to get the word out about upcoming trips. Thanks to Brian Kent for contributing the first article. 
+
+
+Not sure how to format this, but I'll be backpacking in the Olympic mountains in Washington state in late June. I'm not really looking for companions, but I am in search of cool ideas for specific routes.
+
+I also think I'm going to sign up for the Highland Sky 40 miler, in Dolly Sods June 15.
+http://www.wvmtr.org/events/highlands-sky-40m-trail-run/
+
+Thanks,
+Brian
+
+
+
+\sect{Trip Reports and Other Fun stuff}
+\subsect{Alpine Ascent of Seneca Rocks January 2013}
+\textbf{Team:} Felix Duvallet \& Tyler Quinn \\
+Trip report by Tyler Quinn
+
+
+Over the weekend of January 11th, the Explorer's Club of Pittsburgh's Mountaineering School took a trip to West Virginia to make an alpine style ascent of Seneca Rocks. Our plan was to wake up at 1am, start the 12 mile hike by 2am carrying our climbing and bivy gear, arrive at Seneca in the morning, climb as much as possible in packs and mountaineering boots, bivouac on the rocks, rappel down on Sunday morning, and get back to Pittsburgh before dark. It was a nice little Saturday.
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/seneca1.jpg}
+ \captionof{figure}{}
+\end{Figure}
+
+By 1:45am, we started hiking northward. Around 4am we started fighting fatigue and the waiting for the sun to come up. At 6:45am we turned off our headlamps and harnessed our second wind for the last push. After the last bit of elevation, we hit the pipeline at 7:30am, our turn off the trail. On the pipeline, we were pleasantly greeted by grazing horses from the ranch we were travelling through. Around 8:30am we arrived at the Seneca trail head to refill our water in the stream before our climb.
+
+
+It was an unusually warm January morning, perfect climbing weather. We decided to avoid the "stairmaster" by starting our climb on the Skyline Traverse (5.3) at the base of the East Face. This climb was a great way to get comfortable climbing in mountaineering boots and full packs. From there, we made our way to the base of Le Gourmet (5.4). We followed the first pitch of this route and then climbed Front C (5.6). The moves proved to be a challenge in boots, forcing Felix to use an impressively high heel hook in mountaineering boots on lead. After these pitches, we made our way to Old Man's Traverse Ledge to prepare for our last pitch of climbing. We decided to end the day with the Critter Crack (5.6). After a couple impressive moves, Felix topped out on this lead with the abbreviated alpine rack just about gone. Soon after, I summited the climb after a couple falls. We high fived, and made our way to the summit for a picture.
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/seneca2.jpg}
+ \captionof{figure}{}
+\end{Figure}
+
+After the summit, we rappelled half way down the East Face to the Alcoa Ledge. With the afternoon climbers still on the rocks, we had to wait to set up our bivy. I took advantage of this time to take a power nap, hanging in my harness off of the bolts. By 5pm we were cooking dinner of couscous, chocolates, and tea. Using some creativity, we fit both of our bivy sacs on the four foot wide ledge as the sun set.   We soon settled into our sleeping bags, hoping we didn't roll over in our sleep!
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/seneca3.jpg}
+ \captionof{figure}{}
+\end{Figure}
+
+
+By 7am the next morning, we were up and brewing tea before our morning rappel. We touched down safely and were hiking out by 8:30am. Soon we were back at the campground, thankful to rest our tired legs and take our heavy packs off. It was a long, hard weekend that taught me a lot about alpine climbing. As a first timer on this trip, I learned that it isn't always pretty or easy, but, in the end will you know why everyone comes back every year.
+
+
+-Tyler Quinn
+
+\pagebreak
+
+\sect{Club Business}
+This sections contains information on club business and other official matters. 
+
+\subsect{Meeting Schedule and Locations}
+
+\Large
+\textbf{APRIL GENERAL MEETING}\\
+Thursday, Apr 11, 7:30PM\\
+The Union Project (Highland Park Area)\\
+841 North Negley Avenue
+\\%% TODO
+\\
+\textbf{APRIL BOG MEETING}\\
+Thursday, March 21 7:30PM\\
+Phil and Irene  Sidel's house,\\
+5854 Hobart Street - 15217
+
+\normalsize
+
+
+\subsect{Club General Meeting Agenda}
+\textbf{OFFICER REPORTS}\\
+President, Rush Howe -- Announce:
+Audit Committee \& Other Appointments\\
+Vice President, Bill Baxter
+Secretary, Phil Sidel
+Reading \& approval of January BOG minutes
+\\
+\\
+\textbf{APPOINTEE REPORTS}\\
+Membership Coordinator, Martha Gray. The following have applied for Membership:
+
+\begin{center}
+	\begin{tabular}{c}
+		David Reese \\
+		Rahul Shah \\
+		Karryn Lintelman \\
+		James Goram \\
+		Will Foran \\
+		Christopher Churchward \\
+		Mikana Maeda \\
+		Supreeth Archar \\
+		Varun Ramakrisha 
+	\end{tabular}
+\end{center}
+
+
+\textbf{NOTE:} Thanks to everyone who answered the call to renew their memberships this past month! The membership directory will be published mid-April so there is still time to renew before it comes out. You can find out details at \url{http://www.pittecp.org/content/membership-joinrenew}. 
+\\
+\\
+Motion to accept these applicants as new members...\\
+Motion to consider the dues paid with their application as sufficient dues for 2013.
+\\
+\\
+\textbf{COMMITTEE REPORTS}\\
+Audit Committee Report \\
+Rock school report : Jim Schuring submitted a report (See below)\\
+Mountaineering School Progress Report\\
+Rock School Committee 2013\\
+Policies Update Committee/Working Group Progress Report \\
+Any others?  Is there a Roast Committee? 
+\\
+\\
+\textbf{OLD BUSINESS}
+\\
+\\
+\textbf{NEW BUSINESS}
+\\
+\textbf{ADJOURNMENT}\\
+\textbf{PROGRAM}
+
+\textbf{ROCK SCHOOL REPORT}\\
+The rock school committee, Jim Schuring (chair) Brian Ottinger, Brian Cowan, Brian Kent, Leslie Brown, and Erica Karapandi convened along with the returning co-directors Paul Guarino and Matt (buttercup) Janick. As a summary of the meeting the major points of interest are; we have decided to take a no tolerance policy on the no dogs, spouses, significant others to attend the classes or outings by students or instructors. Rush has agreed to allow us the use of his building in Mckees Rocks for the indoor classroom sessions. The application has been rewritten to allow the applicants to express themselves. The 5th outing which in past has been optional in the past is now mandatory. John Zolko has opened his house up for the student/instructor intro- party, part of which time we will use for a brief instructors meeting. The monthly ECP meeting on March 14th will be the last day to turn in applications as well as give the prospective students a chance to meet the co-directors. Early February is the target date for information on the web site.
+\\
+\\
+The mandatory student classes and outings are:\\
+\begin{center}
+    \begin{tabular}{ | l | p{6cm} | }
+    \hline
+    \textbf{Date} & \textbf{Location/Time} \\\hline
+	April 9  &  	7 to 10 intro party at John Zolko's house\\
+	April 16	 & indoor class 1 (McKees Rocks) 6:45 - 10\\
+	April 20	 &	outdoor class 1 at Rock City/Coopers Rock (9am-5pm)\\
+	April 23	 &	indoor class 2 (McKees Rocks) 6:45 - 10\\
+	April 27 &		outdoor class 2 at McConnell's Mill (9am-5pm)\\
+	April 30	 &	indoor class 3 (McKees Rocks) 6:45 - 10\\
+	May 4 &		outdoor class 3 at Roof Rocks/Coopers Rock (9am-5pm)\\
+	May 7 &		indoor class 4 (McKees Rocks) 6:45 - 10\\
+	May 10-12 &	outdoor class4/test white rocks (overnight camping, sat-sun)\\
+	May 18 &		outdoor class 5(9am-5pm)\\
+	June 7, 8, 9 &	post graduation trip for those students that qualify (student optional)\\\hline
+    \end{tabular}
+\end{center}
+
+
+
+
+\subsect{General Meeting Minutes}
+
+Explorer's Club of Pittsburgh\\
+Minutes of the General Meeting - January 10, 2013 7:30 p.m.\\
+Union Project, 801 N. Negley Ave., Pittsburgh, PA
+\\
+\\
+Meeting opened 7:45pm - 11 members (quorum plus 1) and 1 applicant in attendance
+                                            5 more members arrived later
+
+\textbf{OFFICER REPORTS:}
+\\
+\\
+President, Rush Howe: - Reported - we are here.\\
+Vice-President, Bill Baxter - Reported - Tonight's program will be a Power Point Show by Phil Sidel\\
+Secretary, Phil Sidel - Reported - Read December BOG minutes (bold type sections of minutes published in January Newsletter.)  Explained that vote to approve meant approval of the actions of the BOG.  Minutes were approved as read.\\
+Phil also reported that he will be assembling a committee to work on updating the Policies and Procedures statements.  He hopes to include someone (probably Tom Prigg) who worked on the original Mike Brown Expeditions Fund procedures so they can be included.  He asked that any volunteers to help with that see him at the break.  (No one volunteered at the break.)
+\\
+\\
+No other officers were in attendance to report.
+\\
+\\
+\textbf{APPOINTEE REPORTS:}
+\\
+\\
+It was noted that Librarian Phil Breidenbach cannot attend meetings, but would like to continue managing the library.  We are hoping to find someone who could pick up sets of books and other items to bring to the meetings and collect and return deposits, while Phil houses and reports on the Library.
+So far we haven't had anyone volunteer for that; we are planning to ask members who live near Phil to volunteer for that.
+\\
+\\
+Historian, Phil Sidel, reported that some items have been added, but not yet inventoried.  Nick Ross has  a historic record of an Ice-Flow trip, but plans to treat it with a preservative before submitting it to the archive.
+\\
+\\
+Other appointees not present.
+[Note, the Membership Coordinator was not present, and the meeting neglected to move for approval of the new applications.]
+
+\textbf{COMMITTEE REPORTS:} 
+\\
+\\
+Jim Schuring reported that he has accepted chairmanship of the Rock School Committee. Volunteers to serve on that committee should contact him.  He is hoping to include two graduates from the 2012 Rock School.
+\\
+\\
+No other Committees Reported.
+\\
+\\
+Valerie Kramer, Chairperson of the Audit Committee has been out of town; is expected to return in a few days.
+\\
+\\
+\textbf{TRIP REPORT:}\\
+John Zolko and Brian Cowan reported on an ice-climbing/back-country-skiing trip that turned out to be very difficult and unsuccessful, largely because of inadequate equipment and difficult weather conditions.  Despite the difficulties and loss or failure of some of the equipment, there were no injuries; all returned safely.
+\\
+\\
+\textbf{OLD BUSINESS:}\\
+Review and approval of the 2013 proposed budget had been omitted at the December General Meeting.   Until a new budget is approved the club operates on the 2012 budget.  April is the final month for approving or revising the budget for the current year.  It was moved and seconded to approve the proposed budget as printed in the December Newsletter.  It was noted that in that proposed budget the allocation for "organizational memberships and donations to other organizations" had been increased to \$1000.  Some of us missed the line item allocations for sponsorship of the Reel Rock Tour and the Seneca Summit, but they were there in the proposed budget.\\
+\\
+The 2013 budget as proposed in the December Newsletter was approved.
+\\
+\\
+\textbf{NEW BUSINESS:}\\
+Ginette Vinski has drafted and emailed to members a Response on Management Plan (as proposed by NPS) for Shenandoah National Park.   Phil Sidel suggested that the Response, as drafted by Ginette, should be sent on to the NPS over Ginette's signature as the ECP Environmental Coordinator.  Sam Taggart expressed some questions and reservations about the Management Plan which he would like to see answered before sending in our formal response, but given the time requirements, he approved of the letter as drafted.   Motion to send the letter/Response to NPS was passed.  [1/12/2013 - Ginette reports she has sent in the Response Letter.]
+\\
+\\
+Use of Social Media [MeetUp and/or other programs] to reach out and notify interested people of ECP activities and opportunities.   There was discussion of the advantages and costs of these media.  It was suggested that if there are costs for using MeetUp or another medium, we might partly recover them by charging people participation fees, refundable as partt of their ECP membership fee..It was felt that there should, perhaps, be a committee to investigate and present a report or proposal on using one or another of these media.  Perhaps that should come under the Advertising Chairperson (Tara Powers) but she seldom attends meetings.  No specific action was taken.
+\\
+\\
+\textbf{MEETING ADJOURNED - 8:40pm} 
+\\
+\\
+Mike Ciccone won \$16 in the 50-50 Raffle;  
+\\
+\\
+\textbf{PROGRAM:}  Phil Sidel presented a Power Point slide show on his 1999 trip to Arizona for his 50th High School Reunion and climbing with Greg "Steelmonkey" Opland.
+\\
+\\
+\subsect{BOG Meeting Minutes}
+{ \large Minutes BOG meeting Jan 17 2013} - at Bill Baxter's House \\
+\textbf{Attendees: \\
+Bill Baxter, Ron Edwards, Phil Sidel, Subhodeep Moitra, Kathleen Prigg, Mike Ciccone}
+\\
+\\
+\textbf{OFFICERS REPORTS:} \\
+Bill Baxter, VP report:\\
+   Greg Buzulencia will present a program; probably at the February Meeting
+   \\
+   \\
+Phil Sidel, secretary, report:\\
+   \textbf{Phil still needs volunteers for updating policies and procedures}. He is thinking of asking Tom Prigg, 
+   Maggie Schneider, Derek Stuart, and Brian Ottinger. It is, of course, open to any club members willing and
+     desirous to have a hand in it. \\
+   BOG Members, permanent appointees and directors of schools will not be asked to be on this committee.\\
+\textbf{   Some of the tasks  -  (to be divided up among committee members)} \\
+	Review published policies statement to see what issues are left unresolved \\
+	Look at old BOG minutes to see what policies might change. \\
+	Draft revisions in separate topic areas. 
+\\
+\\	
+\textbf{Ron Edwards, Activities chair, report:} \\
+\textbf{Recycling plant tour}, 6 members, 9 people tour. Ron might contribute to newsletter or present in Feb meeting. If we make it more popular, there might be more next time at the event.
+\\
+\\
+\textbf{Ski night :}  Not sure if there might be snow. Designed for families. \$20/family. Club members will get clinic for beginners.
+January has a few (4) good events. February is looking sparse, Ron will try to line up more.
+\\
+\\
+\textbf{Kathleen Dreher, Treasurer, presented the December fund balances:} \\
+	Bogel Fund		\$  9,420.89 \\
+	Mike Brown Fund	\$  1,833.00 \\ 
+	Equipment Fund	\$  2,691.86 \\
+	General Fund		\$  7,887.05 \\
+\textbf{	   Total Balance	 \$21,832.80} \\
+   (Line item breakdowns of 2012 Budget and Revenues and Expenditures to date are shown in separate table)
+\\
+\\
+Kathleen further reported: \\
+   Budget for Mt. Washington Cleanup needs to be revisited since according to accounts it did not cost anything.
+   \\
+   \\
+Kathleen must find out what must be reported to maintain (or improve) our tax status. Maggie Schneider might be able to provide guidance or information on this process.
+\\
+\\
+\textbf{Equipment chair (Not present)}
+\\
+\\
+\textbf{APPOINTEE REPORTS: }\\
+\\
+\textbf{Webmaster: (Not present)} \\
+   Tom George has expressed willingness, but he is not sure about Drupal
+   \\
+   \\
+\textbf{Historian :}
+   Nothing to add
+   \\
+   \\
+\textbf{Membership Coordinator: (NotPresent)} \\
+   Michelle was disappointed that New Applicants were not voted on at January General Meeting. \\
+   She has issued them membership cards anyway. \\
+   She is no longer updating the website data base. \\  
+      This may mean that membership website privileges are no longer properly allocated.
+      (have they been up to now?)\\
+      What should be members-only privileges on website? (access to members info, activity entries, editing?)
+  She is maintaining membership on a spreadsheet.
+  \\
+  \\
+
+\textbf{GENERAL BUSINESS - REVIEW OF JANUARY TASKS}
+\\
+\\
+\textbf{Valerie Kramer, chair person of the Audit Committee}, should be available now. Treasurer can contact her to find out plans for audit.
+\\
+\\
+    There was discussion of the importance of proper handling of funds, including dues payments, raffle collections, school fees, event fees, and others.  Some kind of receipt should be given, and the funds should be placed in an envelope or other special holder and marked as to source, purpose.  Finally, the funds must be deposited to the club's bank account by the treasurer or other authorized signatory and the treasurer notified  as to source and purpose of the monies, so they can be correctly recorded and allocated to the proper accounts.
+    
+Treasurer, Kathleen Prigg, will check back on some of these possible items, since her records show less revenues from some sources, such as raffles, than we understand were collected in 2012.
+\\
+\\
+\textbf{Activities Chair, Ron Edwards, has appointed a number of new Activities Coordinators}, but there are still a  few openings.
+\\
+\\
+\textbf{President Rush Howe re-appointed all the standing appointees}.  There was discussion of whether Tara was continuing as Advertising Chairperson, since we have not seen her nor received reports from her for some time.
+
+\textbf{GENERAL BUSINESS - REVIEW OF FEBRUARY TASKS}
+\\
+\\
+\textbf{Bill Baxter, VP needs to assemble roast committee}
+\\
+\\
+\textbf{Michelle, Membership Coordinator:\\
+   Unpaid members need to be dropped}\\
+   	Procedures for this must be worked out with Webmaster or Website Committee\\
+\textbf{   A Membership Directory must be distributed to the members.}  That will probably have to be done
+   using the Spreadsheet, since the Members section of the new website is currently inadequate.
+   
+
+\textbf{OLD BUSINESS:}\\
+\textbf{MeetUp groups :} \\ \\
+\textbf{Mike Ciccone reported:} \\
+   He had researched the \textbf{costs and other aspects of setting up a MeetUp Group.}
+   The costs varied depending on the length of time you contracted for, available promos, and other factors
+   For example a 6 month commitment would be ~\$12 per month.
+   Events would be announced to members (individual membership would be free)..  Others could search and find our calendar for events that might interest them.\\
+   It was noted that if having the group brought in one member per month, it would pay for itself.
+   (at the General Meeting, it had been noted that if we charged a small fee --say a dollar applicable toward a membership fee -- to participants who didn't join some of the costs would be recovered.)
+\\
+\\
+Alternatives were considered.\\
+  Posting events on other MeetUp Groups (Perhaps making a small donation to the MeetUp Group's owner)
+  Using the various free communications and networking sources we already have 
+    (our website, our yahoo groups, facebook, possibly Google Groups)
+\\
+\\
+\textbf{After reviewing these costs and options, the BOG decided it was not worth paying to set up an ECP MeetUp Group.}
+\\
+\\
+This discussion led to a \textbf{discussion of our current Yahoo Groups.} \\
+\begin{enumerate}
+\item Would we do better switching to Google Groups?  Ron reported that he had investigated this and found Google Groups is not mature enough. \textbf{At this point Yahoo Groups are more manageable.}  
+\item \textbf{ECP-BOG Yahoo Group} was apparently set up to include current BOG Members only.It was perhaps intended as a Yahoo Group to which anyone could post, but only BOG members would receive the messages.  However it does not allow outside members to post.  (Ron subsequently checked and found that Secetary Phil Sidel had set it up and was the 'owner.'   \textbf{It is not used and will be deleted})
+\end{enumerate}
+
+
+\textbf{NEW BUSINESS:} \\
+\begin{enumerate}
+\item Ron Edwards :  Found many old and useless files in the files section of BOG Group Site.
+He is committed to cleaning it.. 
+\item Defunct BOG mailing list that needs to be deleted.
+\item We will Post Agenda to BOG files
+\item Since Constitution and Policy Statements do not specify a frequency for BOG meetings, the BOG decided to skip having a February 2013 BOG meeting - at least as a trial.. 
+\item Next BOG meeting 21 March at Phil and Irene Sidel's house.
+
+\end{enumerate}
+
+\subsect{POLICY UPDATE WORKING GROUP REPORT - February, 2013}
+Volunteers working on updating the Policies and Procedures Statement are:  Barry Adams, Jeff Maurin, Brian Ottinger, Tom Prigg, Nick Ross, Derek Stuart and myself.  Several will be focusing on specific parts of the Policy Document.  We have established a yahoo group-site where we will be sharing our research, suggestions, and comments.
+\\
+\\
+Initially I have posted some problem areas that I came across while reviewing the Constitution and Policy Statements some time ago.  More recently, I have begun reviewing the BOG minutes since the adoption of te current posted document.  It turns out to be more fun than I anticipated, though it seems rare that the BOG explicitly decides on a POLICY.  Decisions are more about what to do in an immediate instance.  Our committee can consider whether these decisions should be made policies, or whether the policy should remain a BOG decision to be made in each instance:
+\\
+\\
+   For instance, in June 1999, the BOG decided that the Roast was "open to other groups and their activities."  We shall discuss whether that should be a general policy - or should be decided by the BOG or the Club for each event and situation.
+  \\
+  \\ 
+   "Membership Packets" are mentioned in the current policies, and the March 1999 BOG indicated that the packet should include, the Constitution, The Policies Statement, and the Membership Directory.  Membership packets have not been provided for a number of years, and in this day of mostly electronic communications and information, we must consider if there should be one and if so, what it should include.
+\\   
+  \\ 
+   In May, 1999, the BOG "clarified the fact that activity coordinators are points of contact for information -- they're not responsible for leading trips."  That is not explicit in the current policy document, though the policy document does not say they are responsible for leading trips. That is a policy that the BOG and the membership may want to reconsider and clarify in the updated Policies document.
+
+\subsect{HISTORIAN'S REPORT}
+As Historian, this review of the 1999 newsletters and BOG minutes was epecially enjoyable.  For instance, the BOG meetings that year frequently opened with singing of the national anthem, and sometimes ended with a song as well.  VP Gary McCormick apparently made it very explicit that he was "in charge" of the meeting, and he had a "statement of a fact" at almost every meeting: (such as: "cat urine glows under black light." or "Babs can slap me, but we must set the price" or "the vibrator was the third manmade devise <sic> to be powered by electricity" or "he will not breed after marriage because it wold violate federal law and create a host of environmental issues.")
+\\
+\\
+In an appeal for participation in the Annual Ice Floe at Petersborough, ONT., there was a delightful recap of ECP's participation in that event, starting about 1978.
+\\
+\\
+1999 was also the year of two sad accidents, the death of devoted activities leader, Lee McHugh, and the serious spinal injury at Nelson's Rocks WV of top climber and instructor, Neal Ketchman.
+  
+
+\end{multicols}
+
+\clearpage
+
+\pagebreak
+
+\subsect{Treasurer Report}
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=\linewidth]{pics/treasure1.pdf}
+\end{Figure}
+
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=\linewidth]{pics/treasure2.pdf}
+\end{Figure}
+
+\pagebreak
+\clearpage
+
+
+\begin{multicols}{2}
+
+
+\sect{Other News}
+
+\subsect{Cross Country Ski Weekend - Joyce Appel}
+
+Submission for Allegany State Park Cross Country Ski Weekend:
+\\
+\\
+Allegany State Park - March 1- 4 (3 nights, 3 days)\\
+(Snow accumulates and stays on the Summit sometimes until the end of March) \\
+    \$70  - Per person for singles in "Singles Cabin". \\
+    \$180  - Per couple for couples in "Couples Cabin" (Have your own bedroom) \\
+  *If a family wants a cabin, call or email me asap. I will put you all together, if a whole cabin is available. Don't wait!!! If whole cabins are gone and I have only spaces left in various cabins, then you are out of luck.
+  \\
+  \\
+Short Description of the Trip,  but call or email for more details:
+ \\
+ \\
+Allegany State Park is near Salamanca, NY. Cabins are on the Summit and trails all go out from the Cabin Area. (No trail pass needed.) This is a snow belt and snow continues to stay and lay in that area to the end of March in a normal winter, even when there is no snow down in the valley below. Cabins have 2 bedrooms and one large sitting area room with table, stove, oven, refrigerator, cabinets. No running water. Water, bathrooms and showers are very close to all the cabins, within short walking distance. Cabins are rented for Friday, Sat. and Sun. nights so we don't have to hassle with packing up out of the cabins Sunday morning. This allows you to do what you want and pack up any time Sunday to head home. And if you wish, stay over Sunday night to pack up out of the cabin by 11AM Monday morning. (If you choose to ski longer, you can.) We have Warming Hut rented for Sat. evening "pot luck dinner" and socializing. And don't forget about our "Cardboard Sled Contest." You can be a participant or cheerleader. Make a cardboard sled and enter various races on the sled hill Saturday before the potluck dinner. Prizes for winners, originality, best painted sled, best decorated sled, most durable...who knows what Joyce Appel will come up with for categories. It is fun and hilarious. Join us!
+ \\
+ \\
+Joyce Appel or joyceappel@windstream.net\\
+724-526-5407
+
+\subsect{WFA course - ECP Mountaineering School - Brian Kent}
+
+A wilderness first aid course is being organized for the ECP mountaineering school, and we still have several spots open for the ECP membership writ large. \\
+\\
+\begin{itemize}
+\item What: Wilderness First Aid, 16 hours of instruction split over two weekend days.
+\item Date: March 23-24
+\item Cost: \$96. This covers both instruction and materials.
+\item Location: CMU. The specific room will be provided upon registration.
+\item Instructor: Don Scelza, from CDS Outdoor School.
+\item Registration: pay Brian Kent (me), by cash, check, or paypal. If necessary I can arrange to meet people in person to accept cash, but mailed checks and paypal are easier. Checks can be mailed to
+\end{itemize}
+
+111 N. Fairmount St., Apt 1
+Pittsburgh, PA 15206.
+\\
+\\
+They should be made out to me. You can also send money by paypal to bpkent@gmail.com. Just make sure to indicate that it's a personal payment as a 'gift' or 'payment owed', but not a purchase. I cannot hold spots for people until they pay me.
+\\
+\\
+\textbf{Registration deadline: March 6th}, but the limited spots are first-come, first served.
+
+\end{multicols}
+% -----
+
+
+\pagebreak
+\clearpage
+
+\appendix
+
+\section{Contact Information}
+
+\subsection{Activities Coordinators}
+For some of our activities, we currently have no active coordinators. If you think you might be able to coordinate
+and lead these activities, contact Activities Chairperson Ron Edwards ecp@edwardsjr.com (412-327-2084)
+
+
+\begin{center}
+    \begin{tabular}{ | l | l | l | }
+    \hline
+    \textbf{Activity} & \textbf{Contact} & \textbf{Email} \\\hline
+	Backpacking & Suraj Joseph & surajj1234@gmail.com \\ \hline
+	Biking - Mountain & Rush Howe & rushhowe@yahoo.com \\ \hline
+	Biking - Road & Chip Kamin & chip.kamin@gmail.com \\ \hline
+    Caving Doug Fulton & Teralyn Iscrupe & fulton12b@yahoo.com\\ \hline
+    Fly Fishing & Bruce Cox & brcox33@comcast.net\\ \hline
+    Ice Climbing & Tom Prigg & Tom.prigg@gmail.com\\ \hline
+    In-Line Skating & Robin Kamin & ekamin@verizon.net\\ \hline
+    Mountaineering & Sam Taggart & samuel.taggart@gmail.com\\ \hline
+    Paddling - Flat Water & Nick Ross & Lnickross@gmail.com\\ \hline
+    Paddling - White Water & Barry Adams & bj2adams@juno.com\\ \hline
+    Rock Climbing & Ron Edwards & ecp@edwardsjr.com\\ \hline
+    Rowing & Bob Dezort & bobdezort@verizon.net\\ \hline
+    Running & Brian Ottinger &  brian-ecp@ottinger10.com\\ \hline
+    Sailing & Bill Baxter & billybax@yahoo.com\\ \hline
+		   &  Jeff Baxter& jeffreywbaxter@yahoo.com\\ \hline
+	Skiing & Downhill  &  Lindsay Hastings LMH239@gmail.com\\ \hline
+	Yoga  &  Allison Pochapin & a.pochapin@gmail.com\\ \hline
+            &  Elise Nolan & elise.nolan@gmail.com\\ \hline
+	Adventure Racing & & \\ \hline
+	Skiing  Cross-Country & & \\ \hline
+	Rafting & & \\ \hline
+	SCUBA Diving & & \\ \hline
+	Sea Kayaking & & \\ \hline
+	Triathlon Training & & \\ \hline
+	Orienteering (proposed) & & \\ \hline
+	Geocaching (proposed) & & \\ \hline
+	Skydiving (proposed) & & \\ \hline
+	 \hline
+    \end{tabular}
+\end{center}
+
+\paragraph{What does an Activity Coordinator do?}
+General advocacy and point of contact for the activity by helping current, new, or prospective members
+get connected with others in the club also interested in the activity and any events planned for it.
+\begin{enumerate}
+\item Seek out new members at general meetings (during the break or at the after-meeting) that
+indicate the activity as one of their interests and introduce yourself as that activities
+"coordinator" that can help them connect with and explore the activity.
+\item Answer incoming emails to the club (sometimes redirected from officers or others who receive
+the inquiry) related to the activity. This is rare.
+\item Spread the word if you see any local events or news related to the activity that you think
+members would like to know by posting (or reposting) on the Listserv and mentioning at any
+General Meeting that you attend. In some cases, create an Event (takes 2 minutes) on the ECP
+calendar to give that event extra visibility.
+\item Encourage any members that are planning an event on their own or as a small/closed group to
+consider opening it up to the general membership in the form of an official Event (and have
+them create the Event)
+\item If possible, directly or indirectly ensure that at least one Event for your activity occurs every year.
+\end{enumerate}
+
+\fbox{\parbox{\linewidth}{
+{\Large\bf ECPers!!}\\
+Contact the Coordinator for activities in which you want to participate.\\
+There are many activities which are not listed in the calendar,
+because the arrangements are spur-of-the-moment, or because\\
+they are regular, periodic (e.g., weekly) activities.\\
+\\
+Some examples are:\\
+Weekly In-Line Skating Sessions\\
+(Contact Coordinator Robin Kamin)\\
+Yoga Sessions in Frick Park\\
+(Contact Yoga Coordinator Elise Nolan)\\
+Flat Water Canoeing trips\\
+(Contact Coordinator Nick Ross)\\
+Mountain Biking Runs\\
+(Contact Coordinator Rush Howe)\\
+And many others\dots}}
+
+\subsection{Officers}
+\begin{center}
+    \begin{tabular}{ | l | l | l | l | }
+    \hline
+    \textbf{Position} & \textbf{Name} & \textbf{Email} & \textbf{Phone} \\\hline
+	President & Rush Howe & president@pittecp.org & 412-983-5265 \\\hline
+	Vice-President & Bill Baxter & vicepresident@pittecp.org & 412-926-8261 \\\hline
+	Secretary & Phil Sidel & philip.sidel@verizon.net & 412-521-9570 \\\hline
+	Treasurer & Kathleen Dehrer & treasurer@pittecp.org & \\\hline
+	Activities Chair & Ron Edwards & activities@pittecp.org & 412-327-2084 \\\hline
+	Equipment Chair & Paul Guarino & equipmentchair@pittecp.org & 585-727-1258 \\\hline
+	Editor & Subhodeep Moitra & editor@pittecp.org & 412-721-5305 \\\hline
+    \end{tabular}
+\end{center}
+
+\subsection{Appointees}
+The ECP Appointees are persons appointed by the president to fill key positions in the club. In
+addition there are appointed Activity Coordinators and Special Committees.
+
+\begin{center}
+    \begin{tabular}{ | l | l | l | l | }
+    \hline
+    \textbf{Position} & \textbf{Name} & \textbf{Email} & \textbf{Phone} \\\hline
+	Advertising & Tara Powers &	tarasmagicalpowers@gmail.com &  \\\hline
+	Environmental & Ginette Vinski & ginette@vinski.net & 412-366-4925 \\\hline
+	Historian & Phil Sidel & sidel.climbing@gmail.com & 	412-521-9570 \\\hline
+	Librarian & Phil Breidenbach & Booksandmaps@yahoo.com & 412-486-1450 \\\hline
+	Membership & Michelle Najera & 	michellenajera81@yahoo.com &  \\\hline
+	Webmaster & Tom George & webmaster@pittecp.org & 412-831-4711 \\\hline
+	\end{tabular}
+\end{center}
+
+
+
+\pagebreak
+\clearpage
+
+
+%----
+\end{document} 
+
