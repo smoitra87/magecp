@@ -1,0 +1,641 @@
+%%% LaTeX Template: Newsletter
+%%%
+%%% Source: http://www.howtotex.com/
+%%% Feel free to distribute this template, but please keep the referal to HowToTeX.com.
+%%% Date: September 2011
+
+
+%%% ---------------
+%%% PREAMBLE
+%%% ---------------
+\documentclass[10pt,a4paper]{article}
+
+% Define geometry (without using the geometry package)
+\setlength\topmargin{-48pt}
+\setlength\headheight{0pt}
+\setlength\headsep{25pt}
+\setlength\marginparwidth{-20pt}
+\setlength\textwidth{7.0in}
+\setlength\textheight{9.5in}
+\setlength\oddsidemargin{-30pt}
+\setlength\evensidemargin{-30pt}
+
+\frenchspacing						% better looking spacing
+
+% Call packages we'll need
+\usepackage[english]{babel}			% english
+\usepackage{graphicx}				% images
+\usepackage{amssymb,amsmath}		% math
+\usepackage{multicol,caption}				% three-column layout
+\usepackage{url}					% clickable links
+\usepackage{marvosym}				% symbols
+\usepackage{wrapfig}				% wrapping text around figures
+\usepackage[T1]{fontenc}			% font encoding
+\usepackage{charter} 				% Charter font for main content
+\usepackage{blindtext}				% dummy text
+\usepackage{datetime}				% custom date
+	\newdateformat{mydate}{\monthname[\THEMONTH] \THEYEAR}
+\usepackage[colorlinks=false]{hyperref}	% links and pdf behaviour
+\usepackage{hyperref}
+
+
+
+% Customize (header and) footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{}
+%\lfoot{	\footnotesize 
+%		Newletter from HowToTeX.com \\
+%		\Mundus\ \href{http://www.howtotex.com}{HowToTeX.com}	\quad
+%		\Telefon\ 555-5555											\quad
+%		\Letter\ \href{mailto:frits@howtotex.com}{frits@howtotex.com}
+%	  }
+\cfoot{}
+\rfoot{\footnotesize ~\\ Page \thepage}
+\renewcommand{\headrulewidth}{0.0pt}	% no bar on top of page
+\renewcommand{\footrulewidth}{0.4pt}	% bar on bottom of page
+
+%%% ---------------
+%%% DEFINITIONS
+%%% ---------------
+
+% Define separators
+\newcommand{\HorRule}[1]{\noindent\rule{\linewidth}{#1}} % Creating a horizontal rule
+\newcommand{\SepRule}{\noindent							 % Creating a separator
+						\begin{center}
+							\rule{250pt}{1pt}
+						\end{center}
+						}						
+
+% Define Title en News input
+\newcommand{\JournalName}[1]{%
+		\begin{center}	
+			\Huge \usefont{T1}{augie}{m}{n}
+			#1%
+		\end{center}	
+		\par \normalsize \normalfont}
+		
+\newcommand{\JournalIssue}[1]{%
+		\hfill \textsc{\mydate \today, No #1}
+		\par \normalsize \normalfont}
+
+\newcommand{\NewsItem}[1]{%
+		\usefont{T1}{augie}{m}{n} 	
+		\large \bf #1 \vspace{4pt}
+		\par \normalsize \normalfont}
+		
+\newcommand{\NewsAuthor}[1]{%
+			\hfill by \textsc{#1} \vspace{4pt}
+			\par \normalfont}		
+
+\newcommand\sect[1]{%
+  \section*{#1}%
+  \addcontentsline{toc}{section}{#1}}
+
+\newcommand\subsect[1]{%
+  \subsection*{#1}%
+  \addcontentsline{toc}{subsection}{#1}}
+
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
+%%% ---------------
+%%% BEGIN DOCUMENT
+%%% ---------------
+\begin{document}
+
+
+
+\begin{titlepage}
+
+\begin{center}
+
+
+% Upper part of the page
+\includegraphics[width=0.5\textwidth]{pics/ecplogo.jpg}\\[1cm]    
+
+\HRule \\[0.4cm]
+{ \Huge \bfseries THE EXPLORER}\\[0.4cm]
+
+\HRule \\[1.5cm]
+
+
+\textsc{\LARGE Aug 2013}\\[9cm]
+
+\textsc{\large The EXPLORER is the monthly newsletter of the Explorers Club Of Pittsburgh,Inc., a non-profit organization devoted to research, adventure and education in outdoor and wilderness recreation and conservation}\\[0.5cm]
+
+
+% Title
+
+% Author and supervisor
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushleft} \large
+%\emph{Author:}\\
+%John \textsc{Smith}
+%\end{flushleft}
+%\end{minipage}
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushright} \large
+%\emph{Supervisor:} \\
+%Dr.~Mark \textsc{Brown}
+%\end{flushright}
+%\end{minipage}
+
+\vfill
+
+% Bottom of the page
+%{\large \today}
+
+\end{center}
+
+\end{titlepage}
+
+
+% Title	
+% -----
+\JournalIssue{1}
+\JournalName{The EXPLORER}
+\noindent\HorRule{3pt} \\[-0.75\baselineskip]
+\HorRule{1pt}
+% -----
+
+\tableofcontents
+
+\clearpage
+
+
+% Front article
+% -----
+\vspace{0.5cm}
+	\SepRule
+\vspace{0.5cm}
+
+ 
+
+\begin{center}
+\begin{minipage}[h]{0.8\linewidth}
+	\begin{wrapfigure}{l}{0.41\textwidth}
+		\includegraphics[width=0.6\linewidth]{pics/me.jpg}
+		\\% this spacer is needed to make the text on the right fit OK
+	\end{wrapfigure}
+	
+	\NewsItem{Message from the editor}
+
+	\emph{Greetings, ECP!} Welcome to the August edition of the club newsletter. In this edition we have a trip report from Greg Zamuley about a climbing trip to W Virginia. Club business is documented through the july BOG and general meeting minutes. The treasury report is included. Our club Librarian, Phil reports on the new books that the club has acquired. Finally, contact information of the officers and activity coordinators is provided in the appendix. 
+\\
+\\
+-- Subhodeep Moitra (Deep)
+
+\vspace{0.5cm}
+
+
+
+	Again as a reminder, you are invited to attend the club general meeting as well as the BOG meeting. The location and date for the General and the BOG meeting is as below.
+	
+\vspace{1cm}
+
+\begin{multicols}{2}
+\Large
+
+
+AUGUST GENERAL MEETING\\
+Thursday, Aug 8, 7:30PM\\
+North Park, Point Shelter\\
+Lake Shore Drive\\
+\\
+SEPT BOG MEETING\\
+Thursday, Sept 19
+TO BE DECIDED
+
+
+\normalsize
+\end{multicols}
+	
+\end{minipage}
+\end{center}
+% -----
+
+\pagebreak
+\clearpage
+
+
+% Other news (1)
+% -----
+\vspace{0.5cm}
+	\SepRule
+\vspace{0.5cm}
+\begin{multicols}{2}
+
+
+\sect{Trip Reports}
+
+
+\subsect{Jim Schuring Falls Off - Greg Zamule}
+\textbf{Wild, Wonderful, Wet West Virginia\\
+or\\
+Jim Schuring Falls off the Pedestal\\						
+\textit{					by Greg Zamule}
+}
+
+\textbf{Day 1}\\
+The cast of characters include Jim Schuring, his daughter Michelle Schuring, Tom Brooks, Valerie Kramer, Leslie Evans and me. Jim takes us to "Area 51" at the New River Meadows. After driving three miles down a less than one lane dirt road, Jim gets an ear beating from Leslie for not letting her know in advance that her van was going to get thrashed by branches and scratched by tree limbs.  This is the beginning of a long weekend of abuse for Jim.
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/jim1.jpg}
+ \captionof{figure}{Leslie Evans and Valerie Kramer walking up the trail}
+\end{Figure}
+
+
+After the leaders put up a couple of climbs, the sky opened up, forcing us off the rock to shelter under a huge, overhanging amphitheater area.  Having no better way to entertain ourselves, we took a crack at some climbs there.  The climbs in this area are difficult so I use the term "entertaining" loosely, maybe "amusing" for the spectators and "abusing" for the climbers are more accurate.  
+
+We located the resident stick-clip, a real stick, not the window-washer that sport climbers wave around. This was the mother of all stick-clips, at least 25 feet long, actually a few branches taped together.  It took both Leslie and Valerie to drag it over to the rock.  
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/jim2.jpg}
+ \captionof{figure}{Mother of all stick clips}
+\end{Figure}
+
+Having won many tug-of-war competitions at the Centre County Grange Fair, only Tom had the strength to make the clip.  We managed to clip the fourth bolt, which was only about a quarter of the way up on the huge overhang.  
+
+I decided to take a whack at it.  In my younger days I would have stood a chance but now it just made for a siege.  Fortunately, the echo of my oomphs, grunts and groans through the amphitheater provided material for the comedians in the audience.
+
+Jim had better luck. Having found a dry face climb near the edge of the amphitheater, he attempted to lead it.  He did an excellent job to the fourth or fifth bolt where there was a resident sling from which we lowered him.  Then I attempted it on top-rope and was stymied getting to the first bolt.  After multiple attempts, I finally gave up and managed to pull by and finish the rest of the climb without falling.  I told Jim how impressed I was with his climbing and that he was my new climbing hero.  This seemed to please him.
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.95\linewidth]{pics/jim3.jpg}
+ \captionof{figure}{Jim Schuring on a face climb}
+\end{Figure}
+
+
+
+After too much fun for one day, we packed it in and headed for dinner and more battle scars on Leslie's van.  We ended up at the Rio-Grande Mexican restaurant in Oak Hill.  No sooner than we started downing margaritas than another thunder storm rolled in and knocked out the power.  The restaurant grilled us fajitas, Tom broke out the camping candles and we had a great time.
+\\
+\\
+\textbf{Day 2}\\
+Additional climbers joined us:  Tara Powers, Paul Guarino and Crystal Clark, young clubbies who I've only met briefly in the past and don't know much about.  At the "Super Mario" area, we were fortunate to find dry climbs.  For a warm-up Tara chose a 10d which finished with a massive overhang described in the guide book as "befuddling."  I had no doubt Tara would flash it.  After all, she looks way fit, leads yoga on stand-up paddle boards, orders mushroom fajitas and her last name is Powers.  Well the roof stymied her as well as me.
+
+That's when I knew we had to call on "Big Jim," my new climbing hero.  Even after multiple attempts and then resorting to aid, he was unable to complete the task.  I was devastated.  My hero had let me down.  Who would fill the gap?  Where was I to turn?  
+
+Suddenly, silhouetted in a ray of sunshine, Paul appeared.  He tied in, hit the rock and blew through the overhang without using all the hand holds.  Paul Guarino, my new climbing hero.  The hell with Jim Schuring.  I figured it was time to roast the big guy so I spread the word and we all got in on the act.  Jim surely deserved it, not only for letting me down but also for being who he is.  You can never take Big Jim seriously; half the time he's joking and you can never tell which half.  That's one of the things we like about him. 
+
+Jim never heard the end of it the rest of the day and hopefully we will never let him. On the last climb of the day Jim belayed me and threatened to leave me hanging unless I denounced Paul as my new climbing hero.  But I'm no Judas; I shouted, "Never!"  Jim lowered me anyway.  I thanked him by drinking his beer and smoking his cigars.
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.8\linewidth]{pics/jim4.png}
+ \captionof{figure}{Jim Schuring pays retribution with Cigars and Whisky after falling from Hero Status}
+\end{Figure}
+
+
+\hrule
+
+\clearpage
+\pagebreak
+
+\sect{Club Business}
+This sections contains information on club business and other official matters. 
+
+\subsect{Meeting Schedule and Locations}
+
+\Large
+\textbf{AUGUST GENERAL MEETING}\\
+AUGUST GENERAL MEETING\\
+Thursday, Aug 8, 7:30PM\\
+North Park, Point Shelter\\
+Lake Shore Drive\\
+\\
+\\
+\textbf{JULY BOG MEETING}\\
+TO BE DECIDED\\
+\normalsize
+
+
+\subsect{JULY GENERAL MEETING AGENDA}
+\textbf{OFFICER REPORTS}\\
+\textit{\textbf{President, Rush Howe}} : No Report. See July General Meeting Minutes \\
+\textit{\textbf{Vice President, Bill Baxter}}: No Report. See July General Meeting Minutes \\
+\textit{\textbf{Secretary, Phil Sidel}} :  See July General Meeting Minutes + BOG minutes \\
+\textit{\textbf{Activity Chair, Ron Edwards}} : No Report. \\
+\textit{\textbf{Treasurer, Kathleen}} : Report Submitted. See Treasury section \\
+\textit{\textbf{Equipment Chair, Derek Stuart}} :See BOG meeting minutes.\\
+\textit{\textbf{Editor, Subhodeep Moitra}} : Hello World!
+\\
+\\
+\textbf{APPOINTEE REPORTS}\\\\
+\textit{\textbf{Membership Coordinator, Martha Gray}} :  No new member applications.\\
+%The following have applied for Membership:
+%
+%\begin{center}
+%	\begin{tabular}{c}
+%		Mike Whaley
+%	\end{tabular}
+%\end{center}
+\textit{\textbf{Advertising, Tara Powers}} :  No Report \\
+\textit{\textbf{Environmental, Ginette Vinski}} : No Report \\
+\textit{\textbf{Historian, Phil Sidel}} : No Report \\
+\textit{\textbf{Librarian, Phil Bradenbach}} : See Librarian section\\
+\textit{\textbf{Webmaster, Tom George}} : No Report\\
+\\
+\hrule
+
+
+\subsect{JULY GENERAL MEETING MINUTES}
+ECP GENERAL MEETING\\
+JULY 11, 2013\\
+Forbes \& Braddock Shelter, Frick Park\\
+Meeting Opened 8:05pm \\
+23 current \& former members\\
+1 applicant and 3 dogs in attendance\\
+Irene Sidel taking notes for minutes.\\
+\\
+\textbf{OFFICER REPORTS:}\\
+\textbf{President Rush Howe:}  Noted that the BOG is meeting every other month unless otherwise necessary.  The July BOG meeting will be at Rush's house. August General Meeting will be in North Park (Point Shelter).\\
+\\
+\textbf{VP Bill Baxter}, - Not Present - No Report\\
+\\
+\textbf{Treasurer Kathleen Prigg:}  - Not Present, but she had sent the July Report to Ron Edwards, who reported:\\
+\begin{center}
+	\begin{tabular}{l l}
+   	Bogel Fund	&	\$ 10,140.73\\
+	MBEG Fund	&	\$     3,351.71\\
+	Equipment Fund	&	\$     1,717.84\\
+	General Fund	  &	\$   7,760.49\\
+	TOTAL &	\$	22,970.77\\
+	\end{tabular}
+\end{center}
+
+Ron also received a detailed breakdown of revenues and expenditures which will be published.\\
+\\
+   It was noted that not all the details of allocation of revenues to the various funds have been published or clearly established.  Some of the policies (base funding  and purpose of the Bogel Fund) have been set and published  in the formal policy statements as published on the club website, and others (purpose, base funding, and grant procedures  of the Mike Brown Expeditionary Grant Fund) are stated or proposed in the description of the fund published ot the club website, but not integrated into the policy statements.
+\\
+\\
+\textbf{Equipment Chairperson, Derek Stuart:} The Club's gear collection has now been moved to Derek \& Rona's house.
+
+There have been lots of requests for gear rental from members going on summer mountaineering trips. Some people have requested flexible crampons which can be used with hiking boots for short glacier crossings; the Club does not have any of these, so they would be a worthwhile purchase.
+
+Other recommended purchases include walkie-talkies and gear duffels.\\
+\\
+\textbf{Secretary Phil Sidel:}    Thanked those who have taken notes at meetings as a basis for his write up of minutes for publication.  Asked for  volunteers to attend the July 18th /BOG  meeting at Rush Howe's and take notes, since Irene will be unable to attend that meeting.\\
+\\
+\textbf{Activities Chairperson, Ron Edwards:}
+\begin{itemize}
+\item   MS150 - July 20-21 - Maggie's Marauders will be doing Keystone Country Ride
+\item   July 27 - Allegheny River/ Mahoning Creek Kayak/ Canoe Trip 
+\item   Flotilla - August 3-4, Contact Tony Vinski
+\item   See website for other activities.
+\item   Mike Ciccone announced The Baker Trail Ultra Challenge - August 24th
+     (not as tough as the Rachel Carson Trail Challenge)
+\end{itemize}
+
+\textit{\textbf{APPOINTEE REPORTS}}:\\ 
+\textbf{   Historian - Phil Sidel:} - Nothing to report\\
+\\
+   \textbf{Membership Coordinator - Martha Gray:} - Not Present, but motion made and seconded to approve for membership the new applicant listed in the Newsletter (Mike Whaley) was passed unanimously.
+\\
+\\
+\textbf{OLD BUSINESS:}
+\textbf{    Ron Edwards reported: } 	New Logo project is still open - submissions will be reviewed by BOG
+\\
+\\
+   \textbf{ Tom Prigg's proposal : } produce a digital archive of ECP historical documents was discussed, but no action was taken. 	Probably will require professional archiving service. 	Bogel fund might be used for this.  \\
+   \\
+\textbf{NEW BUSINESS: } 
+\begin{itemize}
+\item   Phil Sidel suggested that members should be considering nominees for Flag and Life Membership (Qualifications were printed up in a recent newsletter issue and are shown in the ECP Constitution which is posted on the pittecp.org website.  Nominations can be made at any BOG meeting.
+\item   Phil also suggested that members should be considering environmental organizations to be supported .  There is a \$1000 budget for organizational memberships and donations and the BOG must decide which organizations to support in 2013.  Deep Moitra has brought to our attention the Adventurers and Scientists for Conservation, which may be one of the organizations we should support.
+\item    Matt Janick noted that it was time for the school committee chairpersons to be appointed.   Felix Duvallet has already been appointed Mountaineering School Committee Chairperson - anyone wishing to serve on that committee should contact him.  Matt volunteered to chair the Rock School Committee, and was so appointed.
+\item There were no volunteers to run a 50-50 raffle, so there would be no post-meeting raffle.  There would also be no post-meeting slide-show or program.  There will be some hot dogs and refreshments for post-meeting socializing.
+\end{itemize}
+\textbf{Meeting Adjourned - 8:45pm}
+
+
+
+
+\hrule 
+\subsect{JULY BOG MEETING MINUTES} 
+
+\textbf{ECP BOG MEETING - JULY 25th, 2013
+MINUTES AND  SUPPLEMENTARY DISCUSSION}\\
+\\
+\textbf{Attendees:} 	 Bill Baxter, Martha Gray, Rush Howe, Subhodeep Moitra, 	 Kathleen Prigg, Phil Sidel, Derek Stuart\\
+\\
+\textbf{OFFICER \& APPOINTEE REPORTS - } 	No Reports\\
+\\
+\textbf{OLD AND NEW BUSINESS}\\
+\textbf{Environmental Organizations to be Supported by ECP Funds}\\
+\\
+The ten organizations we supported in 2012 were reviewed:
+\begin{itemize}
+\item Access Fund
+\item Allegheny Cleanways
+\item Bike Pittsburgh
+\item Friends of Seneca
+\item Friends of Allegheny Wilderness
+\item Keystone Trails Association
+\item Loyalhanna Grotto
+\item Montour Trails Council
+\item Rachel Carson Trails Council
+\item WV Highlands Conservancy
+\end{itemize}
+
+\textbf{ORGANIZATIONS TO BE ADDED:}\\
+\textbf{It was moved, seconded and passed to add Friends of Muir Valley}, an organization that has done much to preserve the Muir Valley section of Red River Gorge for climbing and other recreation. \\
+\\
+\textbf{It was moved, seconded and passed to add PTAG (Pittsburgh Trails Advocacy Group)} that ensures proper trails for biking and other recreation through hands-on trailwork as well as advocacy with owners and managers of the terrain.
+\\
+\\
+\textbf{ORGANIZATIONS TO BE REMOVED}\\
+
+\textbf{It was moved, seconded and passed to remove Montour Trail Council }since the Montour Trail is now complete and should not need much funding for maintenance.\\
+\textbf{It was moved, seconded and passed to remove Rachel Carson Trails Council} from the list, since recent financial report shows their resources and revenue to be strong and very little was spent on the trails
+.
+\textbf{It was moved, seconded and passed to delay decision on support for/membership in Adventurers and Scientists} for Conservation until we receive response to our inquiry to them and find out more about their operation.
+The BOG noted that the new list of ten organizations would be presented to the membership with recommendation that a donation or membership fee of \$100 would be allotted to each, given that the budget allots \$1000 from the Bogel Fund for such donations and memberships.\\
+BOG voted to approve the Letter to Adventurers and Scientists for Conservation (ASC) as drafted by Phil Sidel and edited by Ron Edwards - to find out  more about the operation and how we would participate.
+\textbf{Potential Nominees for Flag Membership Awards were discussed}\\  
+A couple of the top candidates will be approached,  To get their list of qualifications (bios?), and we will anticipate formal nominations to the BOG in September, Formal nominations will be made to the membership - one at the October General Meeting and one at the November General Meeting.\\
+It was noted that except for a five-year length-of-membership requirement, the constitution is very general about what constitutes "significant contributions towards achieving the club's goals of research, education, and adventure"
+\\
+\\
+The Annual Audit Committee Report (published in the June 2013 Newsletter) was reviewed and approved by the BOG.  Major points - Management of School Revenues and Expenditures should be handled by the School Committees, and receipts should be annotated - were discussed.
+\\
+\\
+\textbf{Plan for Digitizing ECP Historical Documents was discussed}
+BOG agreed that we should start with a limited but important part of Club History.  Documents from/about the Angel Falls Expeditions would be a good starting project. Tom and Kathleen Prigg will put together a set of those documents (supplemented by related documents Phil Sidel finds in the Club Archives) and get some proposals and prices for digitizing anfd archiving the set.
+\\
+\\
+Derek Stuart noted that since the Bogel Environmental Fund is currently greatly over-funded for anticipated annual expenditures, it would be wise to curtail the automatic contribution of  a portion of each membership fee to that fund - at least until the fund balance comes significantly closer to anticipated annual expenditures. It was duly  moved, seconded and passed that no portion of membership fees should be allocated to the Bogel Fund until the Bogel Fund balance is reduced to \$3000 or less.  Meanwhile, that money should go to the gear fund, since there are many items that could be purchased to enhance ECP's services to its members.
+Bill Baxter asked what funds were available for food, beverages, and shelter reservation for the August General Meeting in North Park.  It was noted that the \$700 that was budgeted for the "Roast and August Party" was entirely spent on the Roast/Party in WVa in early June.
+However, it was noted that with the extended series of Summer Outdoor meetings, we are saving money allocated for meeting expenses, so it was moved, seconded, and passed to spend up to \$125 from the Meeting Location budget plus \$50 from President's discretionary budget for the August Party.  (Secretary's Note:  As of May 1st, there was just \$125 left in the budget for Meeting Locations.  Had meeting locations through December all been paid for by then?) 
+It was noted that money is also available for BOG meetings - typically \$15 to the host to cover snacks and beverages for the attendees.
+Meeting Adjourned
+
+\hrule
+
+
+\end{multicols}
+
+\clearpage
+\pagebreak
+
+\subsect{Treasurer Report}
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=\linewidth]{pics/treasure1.pdf}
+\end{Figure}
+
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=\linewidth]{pics/treasure2.pdf}
+\end{Figure}
+
+\pagebreak
+
+\sect{Other Announcements}
+
+\subsect{Librarian Section - Phil Bradenbach}
+	
+\begin{Figure}
+ \centering
+ \includegraphics[width=0.9\linewidth]{pics/Library.pdf}
+\end{Figure}
+	
+\hrule
+
+\clearpage
+\pagebreak
+
+
+\appendix
+
+\section{Contact Information}
+
+\subsection{Activities Coordinators}
+For some of our activities, we currently have no active coordinators. If you think you might be able to coordinate
+and lead these activities, contact Activities Chairperson Ron Edwards ecp@edwardsjr.com (412-327-2084)
+
+
+\begin{center}
+    \begin{tabular}{ | l | l | l | }
+    \hline
+    \textbf{Activity} & \textbf{Contact} & \textbf{Email} \\\hline
+	Backpacking & Suraj Joseph & surajj1234@gmail.com \\ \hline
+	Biking - Mountain & Rush Howe & rushhowe@yahoo.com \\ \hline
+	Biking - Road & TBD & TBD \\ \hline
+    Caving  & Doug Fulton & fulton12b@yahoo.com\\ \hline
+    Fly Fishing & Bruce Cox & brcox33@comcast.net\\ \hline
+    Ice Climbing & Tom Prigg & Tom.prigg@gmail.com\\ \hline
+    In-Line Skating & Robin Kamin & ekamin@verizon.net\\ \hline
+    Mountaineering & Sam Taggart & samuel.taggart@gmail.com\\ \hline
+    Paddling - Flat Water & Nick Ross & Lnickross@gmail.com\\ \hline
+    Paddling - White Water & Barry Adams & bj2adams@juno.com\\ \hline
+    Rock Climbing & Ron Edwards & ecp@edwardsjr.com\\ \hline
+    Rowing & Bob Dezort & bobdezort@verizon.net\\ \hline
+    Trail Running & Brian Ottinger &  brian-ecp@ottinger10.com\\ \hline
+    Sailing & Bill Baxter & billybax@yahoo.com\\ \hline
+		   &  Jeff Baxter& jeffreywbaxter@yahoo.com\\ \hline
+	Skiing & Downhill  &  Lindsay Hastings LMH239@gmail.com\\ \hline
+	Yoga  &  Allison Pochapin & a.pochapin@gmail.com\\ \hline
+            &  Elise Nolan & elise.nolan@gmail.com\\ \hline
+	Adventure Racing & & \\ \hline
+	Skiing  Cross-Country & & \\ \hline
+	Rafting & & \\ \hline
+	SCUBA Diving & & \\ \hline
+	Sea Kayaking & & \\ \hline
+	Triathlon Training & & \\ \hline
+	Orienteering (proposed) & & \\ \hline
+	Geocaching (proposed) & & \\ \hline
+	Skydiving (proposed) & & \\ \hline
+	 \hline
+    \end{tabular}
+\end{center}
+
+\paragraph{What does an Activity Coordinator do?}
+General advocacy and point of contact for the activity by helping current, new, or prospective members
+get connected with others in the club also interested in the activity and any events planned for it.
+\begin{enumerate}
+\item Seek out new members at general meetings (during the break or at the after-meeting) that
+indicate the activity as one of their interests and introduce yourself as that activities
+"coordinator" that can help them connect with and explore the activity.
+\item Answer incoming emails to the club (sometimes redirected from officers or others who receive
+the inquiry) related to the activity. This is rare.
+\item Spread the word if you see any local events or news related to the activity that you think
+members would like to know by posting (or reposting) on the Listserv and mentioning at any
+General Meeting that you attend. In some cases, create an Event (takes 2 minutes) on the ECP
+calendar to give that event extra visibility.
+\item Encourage any members that are planning an event on their own or as a small/closed group to
+consider opening it up to the general membership in the form of an official Event (and have
+them create the Event)
+\item If possible, directly or indirectly ensure that at least one Event for your activity occurs every year.
+\end{enumerate}
+
+\fbox{\parbox{\linewidth}{
+{\Large\bf ECPers!!}\\
+Contact the Coordinator for activities in which you want to participate.\\
+There are many activities which are not listed in the calendar,
+because the arrangements are spur-of-the-moment, or because\\
+they are regular, periodic (e.g., weekly) activities.\\
+\\
+Some examples are:\\
+Weekly In-Line Skating Sessions\\
+(Contact Coordinator Robin Kamin)\\
+Yoga Sessions in Frick Park\\
+(Contact Yoga Coordinator Elise Nolan)\\
+Flat Water Canoeing trips\\
+(Contact Coordinator Nick Ross)\\
+Mountain Biking Runs\\
+(Contact Coordinator Rush Howe)\\
+And many others\dots}}
+
+\subsection{Officers}
+\begin{center}
+    \begin{tabular}{ | l | l | l | l | }
+    \hline
+    \textbf{Position} & \textbf{Name} & \textbf{Email} & \textbf{Phone} \\\hline
+	President & Rush Howe & president@pittecp.org & 412-983-5265 \\\hline
+	Vice-President & Bill Baxter & vicepresident@pittecp.org & 412-926-8261 \\\hline
+	Secretary & Phil Sidel & sidel.climbing@gmail.com & 412-521-9570 \\\hline
+	Treasurer & Kathleen Prigg &  kathleen.prigg@gmail.com &  724-584-4013 \\\hline
+	Activities Chair & Ron Edwards & activities@pittecp.org & 412-327-2084 \\\hline
+	Equipment Chair & Derek Stuart & equipmentchair@pittecp.org & 585-727-1258 \\\hline
+	Editor & Subhodeep Moitra & subho@cmu.edu & 412-721-5305 \\\hline
+    \end{tabular}
+\end{center}
+
+\subsection{Appointees}
+The ECP Appointees are persons appointed by the president to fill key positions in the club. In
+addition there are appointed Activity Coordinators and Special Committees.
+
+\begin{center}
+    \begin{tabular}{ | l | l | l | l | }
+    \hline
+    \textbf{Position} & \textbf{Name} & \textbf{Email} & \textbf{Phone} \\\hline
+	Advertising & Tara Powers &	tarasmagicalpowers@gmail.com &  \\\hline
+	Environmental & Ginette Vinski & ginette@vinski.net & 412-366-4925 \\\hline
+	Historian & Phil Sidel & sidel.climbing@gmail.com & 	412-521-9570 \\\hline
+	Librarian & Phil Breidenbach & Booksandmaps@yahoo.com & 412-486-1450 \\\hline
+	Membership & Martha Gray & 	graymf@gmail.com &  \\\hline
+	Webmaster & Tom George & webmaster@pittecp.org & 412-831-4711 \\\hline
+	\end{tabular}
+\end{center}
+
+
+
+\pagebreak
+\clearpage
+
+
+%----
+\end{document} 
+
